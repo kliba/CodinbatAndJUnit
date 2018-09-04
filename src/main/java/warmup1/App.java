@@ -16,18 +16,18 @@ public class App {
         imp.sleepIn(true, true); //true
 
         //diff21
-        imp.diff21(2); //2
-        imp.diff21(11); //11
-        imp.diff21(0); //0
-        imp.diff21(2); //2
-        imp.diff21(8); //8
-        imp.diff21(18); //18
-        imp.diff21(21); //21
-        imp.diff21(20); //20
-        imp.diff21(19); //19
-        imp.diff21(22); //22
-        imp.diff21(23); //23
-        imp.diff21(58); //58
+        imp.diff21(19); //2
+        imp.diff21(10); //11
+        imp.diff21(21); //0
+        imp.diff21(22); //2
+        imp.diff21(25); //8
+        imp.diff21(30); //18
+        imp.diff21(0); //21
+        imp.diff21(1); //20
+        imp.diff21(2); //19
+        imp.diff21(-1); //22
+        imp.diff21(-2); //23
+        imp.diff21(50); //58
 
         //nearHundred
         imp.nearHundred(93); //true
@@ -137,7 +137,7 @@ public class App {
 
         //monkeyTrouble
         imp.monkeyTrouble(true, true); //true
-        imp.monkeyTrouble(false, false); //false
+        imp.monkeyTrouble(false, false); //true
         imp.monkeyTrouble(true, false); //false
         imp.monkeyTrouble(false, true); //false
 
@@ -193,7 +193,7 @@ public class App {
         imp.or35(9); //true
         imp.or35(4); //false
         imp.or35(7); //false
-        imp.or35(6); //false
+        imp.or35(6); //true
         imp.or35(17); //false
         imp.or35(18); //true
         imp.or35(29); //false
@@ -363,7 +363,7 @@ public class App {
         imp.max1020(10, 21); //10
         imp.max1020(21, 10); //10
         imp.max1020(9, 11); //11
-        imp.max1020(23, 10); //23
+        imp.max1020(23, 10); //10
         imp.max1020(20, 10); //20
         imp.max1020(7, 20); //20
         imp.max1020(17, 16); //17
