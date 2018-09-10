@@ -140,7 +140,123 @@ public class App {
         myArray.makeMiddle(fourthMakeMiddle);
         myArray.makeMiddle(fifthMakeMiddle);
 
+        //midThree
+        int[] firstMidThree = {1, 2, 3, 4, 5};
+        int[] secondMidThree = {8, 6, 7, 5, 3, 0, 9};
+        int[] thirdMidThree = {1, 2, 3};
+        myArray.midThree(firstMidThree);
+        myArray.midThree(secondMidThree);
+        myArray.midThree(thirdMidThree);
 
+        //unlucky1
+        int[] firstUnlucky1 = {1, 3, 4, 5};
+        int[] secondUnlucky1 = {2, 1, 3, 4, 5};
+        int[] thirdUnlucky1 = {1, 1, 1};
+        int[] fourthUnlucky1 = {1, 3, 1};
+        int[] fifthUnlucky1 = {1, 1, 3};
+        int[] sixthUnlucky1 = {1, 2, 3};
+        int[] seventhUnlucky1 = {3, 3, 3};
+        int[] eighthUnlucky1 = {1, 3};
+        int[] ninthUnlucky1 = {1, 4};
+        int[] tenthUnlucky1 = {1};
+        int[] eleventhUnlucky1 = {};
+        int[] twelfthUnlucky1 = {1, 1, 1, 3, 1};
+        int[] thirteenthUnlucky1 = {1, 1, 3, 1, 1};
+        int[] fourteenthUnlucky1 = {1, 1, 1, 1, 3};
+        int[] fifteenthUnlucky1 = {1, 4, 1, 5};
+        int[] sixteenthUnlucky1 = {1, 1, 2, 3};
+        int[] eighteenthUnlucky1 = {2, 3, 2, 1};
+        int[] nineteenthUnlucky1 = {2, 3, 1, 3};
+        int[] twentiethUnlucky1 = {1, 2, 3, 4, 1, 3};
+        myArray.unlucky1(firstUnlucky1);
+        myArray.unlucky1(secondUnlucky1);
+        myArray.unlucky1(thirdUnlucky1);
+        myArray.unlucky1(fourthUnlucky1);
+        myArray.unlucky1(fifthUnlucky1);
+        myArray.unlucky1(sixthUnlucky1);
+        myArray.unlucky1(seventhUnlucky1);
+        myArray.unlucky1(eighthUnlucky1);
+        myArray.unlucky1(ninthUnlucky1);
+        myArray.unlucky1(tenthUnlucky1);
+        myArray.unlucky1(eleventhUnlucky1);
+        myArray.unlucky1(twelfthUnlucky1);
+        myArray.unlucky1(thirteenthUnlucky1);
+        myArray.unlucky1(fourteenthUnlucky1);
+        myArray.unlucky1(fifteenthUnlucky1);
+        myArray.unlucky1(sixteenthUnlucky1);
+        myArray.unlucky1(eighteenthUnlucky1);
+        myArray.unlucky1(nineteenthUnlucky1);
+        myArray.unlucky1(twentiethUnlucky1);
+
+        //sameFirstLast
+        int[] firstSameFirstLast = {1, 2, 3};
+        int[] secondSameFirstLast = {1, 2, 3, 1};
+        int[] thirdSameFirstLast = {1, 2, 1};
+        int[] fourthSameFirstLast = {7};
+        int[] fifthSameFirstLast = {};
+        int[] sixthSameFirstLast = {1, 2, 3, 4, 5, 1};
+        int[] seventhSameFirstLast = {1, 2, 3, 4, 5, 13};
+        int[] eighthSameFirstLast = {13, 2, 3, 4, 5, 13};
+        int[] ninthSameFirstLast = {7, 7};
+        myArray.sameFirstLast(firstSameFirstLast);
+        myArray.sameFirstLast(secondSameFirstLast);
+        myArray.sameFirstLast(thirdSameFirstLast);
+        myArray.sameFirstLast(fourthSameFirstLast);
+        myArray.sameFirstLast(fifthSameFirstLast);
+        myArray.sameFirstLast(sixthSameFirstLast);
+        myArray.sameFirstLast(seventhSameFirstLast);
+        myArray.sameFirstLast(eighthSameFirstLast);
+        myArray.sameFirstLast(ninthSameFirstLast);
+
+        //sum3
+        int[] firstSum3 = {1, 2, 3};
+        int[] secondSum3 = {5, 11, 2};
+        int[] thirdSum3 = {7, 0, 0};
+        int[] fourthSum3 = {1, 2, 1};
+        int[] fifthSum3 = {1, 1, 1};
+        int[] sixthSum3 = {2, 7, 2};
+        myArray.sum3(firstSum3);
+        myArray.sum3(secondSum3);
+        myArray.sum3(thirdSum3);
+        myArray.sum3(fourthSum3);
+        myArray.sum3(fifthSum3);
+        myArray.sum3(sixthSum3);
+
+        //maxEnd3
+        int[] firstMaxEnd3 = {1, 2, 3};
+        int[] secondMaxEnd3 = {11, 5, 9};
+        int[] thirdMaxEnd3 = {2, 11, 3};
+        int[] fourthMaxEnd3 = {11, 3, 3};
+        int[] fifthMaxEnd3 = {3, 11, 11};
+        int[] eighthMaxEnd3 = {2, 2, 2};
+        int[] ninthMaxEnd3 = {2, 11, 2};
+        int[] tenthMaxEnd3 = {0, 0, 1};
+        myArray.maxEnd3(firstMaxEnd3);
+        myArray.maxEnd3(secondMaxEnd3);
+        myArray.maxEnd3(thirdMaxEnd3);
+        myArray.maxEnd3(fourthMaxEnd3);
+        myArray.maxEnd3(fifthMaxEnd3);
+        myArray.maxEnd3(eighthMaxEnd3);
+        myArray.maxEnd3(ninthMaxEnd3);
+        myArray.maxEnd3(tenthMaxEnd3);
+
+        //makeEnds
+        int[] firstMakeEnds = {1, 2, 3};
+        int[] secondMakeEnds = {1, 2, 3, 4};
+        int[] thirdMakeEnds = {7, 4, 6, 2};
+        int[] fourthMakeEnds = {1, 2, 2, 2, 2, 2, 2, 3};
+        int[] fifthMakeEnds = {7, 4};
+        int[] sixthMakeEnds = {7};
+        int[] seventhMakeEnds = {5, 2, 9};
+        int[] eighthMakeEnds = {2, 3, 4, 1};
+        myArray.makeEnds(firstMakeEnds);
+        myArray.makeEnds(secondMakeEnds);
+        myArray.makeEnds(thirdMakeEnds);
+        myArray.makeEnds(fourthMakeEnds);
+        myArray.makeEnds(fifthMakeEnds);
+        myArray.makeEnds(sixthMakeEnds);
+        myArray.makeEnds(seventhMakeEnds);
+        myArray.makeEnds(eighthMakeEnds);
 
     }
 }

@@ -105,4 +105,101 @@ public class Array1 {
     }
 
 
+    //Given an array of ints of odd length, return a new array length 3 containing the elements from
+    //the middle of the array. The array length will be at least 3.
+      //midThree([1, 2, 3, 4, 5]) → [2, 3, 4]
+      //midThree([8, 6, 7, 5, 3, 0, 9]) → [7, 5, 3]
+      //midThree([1, 2, 3]) → [1, 2, 3]
+
+    public int[] midThree(int[] nums) {
+        int[] result = {nums[nums.length / 2 - 1], nums[nums.length / 2], nums[nums.length / 2 + 1]};
+
+        return result;
+    }
+
+
+    //We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if the given
+    //array contains an unlucky 1 in the first 2 or last 2 positions in the array.
+      //unlucky1([1, 3, 4, 5]) → true
+      //unlucky1([2, 1, 3, 4, 5]) → true
+      //unlucky1([1, 1, 1]) → false
+
+    public boolean unlucky1(int[] nums) {
+        boolean result = false;
+
+        if (nums.length < 2) {
+            result = false;
+        }
+        else if ((nums[0] == 1 && nums[1] == 3) ||
+                (nums[1] == 1 && nums[2] == 3) ||
+                nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3)
+            result = true;
+
+        return result;
+    }
+
+
+    //Given an array of ints, return true if the array is length 1 or more, and the first
+    //element and the last element are equal.
+      //sameFirstLast([1, 2, 3]) → false
+      //sameFirstLast([1, 2, 3, 1]) → true
+      //sameFirstLast([1, 2, 1]) → true
+
+    public boolean sameFirstLast(int[] nums) {
+        if (nums.length < 1)
+            return false;
+        else if (nums[0] == nums[nums.length - 1])
+            return true;
+        else
+            return false;
+    }
+
+
+    //Given an array of ints length 3, return the sum of all the elements.
+      //sum3([1, 2, 3]) → 6
+      //sum3([5, 11, 2]) → 18
+      //sum3([7, 0, 0]) → 7
+
+    public int sum3(int[] nums) {
+        return nums[0] + nums[1] + nums[2];
+    }
+
+
+    //Given an array of ints length 3, figure out which is larger, the first or last element in the array,
+    //and set all the other elements to be that value. Return the changed array.
+      //maxEnd3([1, 2, 3]) → [3, 3, 3]
+      //maxEnd3([11, 5, 9]) → [11, 11, 11]
+      //maxEnd3([2, 11, 3]) → [3, 3, 3]
+
+    public int[] maxEnd3(int[] nums) {
+        int biggestElem = nums[0];
+
+        if (biggestElem < nums[2])
+            biggestElem = nums[2];
+
+        int[] result = {biggestElem, biggestElem, biggestElem};
+        return result;
+    }
+
+
+    //Given an array of ints, return a new array length 2 containing the first and last elements
+    //from the original array. The original array will be length 1 or more.
+      //makeEnds([1, 2, 3]) → [1, 3]
+      //makeEnds([1, 2, 3, 4]) → [1, 4]
+      //makeEnds([7, 4, 6, 2]) → [7, 2]
+
+    public int[] makeEnds(int[] nums) {
+        int[] result = {0, 0};
+
+        if (nums.length == 1) {
+            result[0] = nums[0];
+            result[1] = nums[0];
+        }
+        else {
+            result[0] = nums[0];
+            result[1] = nums[nums.length - 1];
+        }
+
+        return result;
+    }
 }
