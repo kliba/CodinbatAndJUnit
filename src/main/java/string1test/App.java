@@ -1,4 +1,4 @@
-package string1;
+package string1test;
 
 public class App {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package string1;
+package string1test;
 
 import org.junit.Test;
 
@@ -470,6 +470,5 @@ public class String1Test {
         assertEquals("Hello", stringToTest.withoutX2("Hello"));
         assertEquals("Hexllo", stringToTest.withoutX2("Hexllo"));
         assertEquals("Hxllo", stringToTest.withoutX2("xHxllo"));
-
     }
 }
