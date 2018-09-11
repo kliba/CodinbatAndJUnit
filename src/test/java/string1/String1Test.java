@@ -1,4 +1,4 @@
-package string1test;
+package string1;
 
 import org.junit.Test;
 
