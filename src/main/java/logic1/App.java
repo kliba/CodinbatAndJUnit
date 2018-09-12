@@ -167,5 +167,85 @@ public class App {
         myLogic.blueTicket(8, 4, 3);
         myLogic.blueTicket(8, 4, 2);
         myLogic.blueTicket(8, 4, 1);
+
+        //******https://codingbat.com/java/Array-1******second column
+
+        //dateFashion
+        myLogic.dateFashion(5, 10);
+        myLogic.dateFashion(5, 2);
+        myLogic.dateFashion(5, 5);
+        myLogic.dateFashion(3, 3);
+        myLogic.dateFashion(10, 2);
+        myLogic.dateFashion(2, 9);
+        myLogic.dateFashion(9, 9);
+        myLogic.dateFashion(10, 5);
+        myLogic.dateFashion(2, 2);
+        myLogic.dateFashion(3, 7);
+        myLogic.dateFashion(2, 7);
+        myLogic.dateFashion(6, 2);
+
+        //sortaSum
+        myLogic.sortaSum(3, 4);
+        myLogic.sortaSum(9, 4);
+        myLogic.sortaSum(10, 11);
+        myLogic.sortaSum(12, -3);
+        myLogic.sortaSum(-3, 12);
+        myLogic.sortaSum(4, 5);
+        myLogic.sortaSum(4, 6);
+        myLogic.sortaSum(14, 7);
+        myLogic.sortaSum(14, 6);
+
+        //in1To10
+        myLogic.in1To10(5, false);
+        myLogic.in1To10(11, false);
+        myLogic.in1To10(11, true);
+        myLogic.in1To10(10, false);
+        myLogic.in1To10(10, true);
+        myLogic.in1To10(9, false);
+        myLogic.in1To10(9, true);
+        myLogic.in1To10(1, false);
+        myLogic.in1To10(1, true);
+        myLogic.in1To10(0, false);
+        myLogic.in1To10(0, true);
+        myLogic.in1To10(-1, false);
+        myLogic.in1To10(-1, true);
+        myLogic.in1To10(99, false);
+        myLogic.in1To10(-99, true);
+
+        //old35
+        myLogic.old35(3);
+        myLogic.old35(10);
+        myLogic.old35(15);
+        myLogic.old35(5);
+        myLogic.old35(9);
+        myLogic.old35(8);
+        myLogic.old35(7);
+        myLogic.old35(6);
+        myLogic.old35(17);
+        myLogic.old35(18);
+        myLogic.old35(29);
+        myLogic.old35(20);
+        myLogic.old35(21);
+        myLogic.old35(22);
+        myLogic.old35(45);
+        myLogic.old35(99);
+
+        //teenSum
+        myLogic.teenSum(3, 4);
+        myLogic.teenSum(10, 13);
+        myLogic.teenSum(13, 2);
+        myLogic.teenSum(3, 19);
+        myLogic.teenSum(13, 13);
+        myLogic.teenSum(10, 10);
+        myLogic.teenSum(6, 14);
+        myLogic.teenSum(15, 2);
+        myLogic.teenSum(19, 19);
+        myLogic.teenSum(19, 20);
+        myLogic.teenSum(2, 18);
+        myLogic.teenSum(12, 4);
+        myLogic.teenSum(2, 20);
+        myLogic.teenSum(2, 17);
+        myLogic.teenSum(2, 16);
+        myLogic.teenSum(6, 7);
     }
 }

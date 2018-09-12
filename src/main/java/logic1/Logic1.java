@@ -194,7 +194,90 @@ public class Logic1 {
             return 5;
         else
             return 0;
+    }
 
 
+    //******https://codingbat.com/java/Array-1******second column
+
+    //You and your date are trying to get a table at a restaurant. The parameter "you" is the stylishness of your
+    //clothes, in the range 0..10, and "date" is the stylishness of your date's clothes.
+    //The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes.
+    //If either of you is very stylish, 8 or more, then the result is 2 (yes).
+    //With the exception that if either of you has style of 2 or less, then the result is 0 (no).
+    //Otherwise the result is 1 (maybe).
+      //dateFashion(5, 10) → 2
+      //dateFashion(5, 2) → 0
+      //dateFashion(5, 5) → 1
+
+    public int dateFashion(int you, int date) {
+        if (you <= 2 || date <= 2)
+            return 0;
+        else if (you >= 8 || date >= 8)
+            return 2;
+        else
+            return 1;
+    }
+
+
+    //Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive,
+    //are forbidden, so in that case just return 20.
+      //sortaSum(3, 4) → 7
+      //sortaSum(9, 4) → 20
+      //sortaSum(10, 11) → 21
+
+    public int sortaSum(int a, int b) {
+        int sum = a + b;
+
+        if (sum >= 10 && sum <= 19)
+            return 20;
+        else
+            return sum;
+    }
+
+
+    //Given a number n, return true if n is in the range 1..10, inclusive.
+    //Unless outsideMode is true, in which case return true if the number is less or equal to 1,
+    //or greater or equal to 10.
+      //in1To10(5, false) → true
+      //in1To10(11, false) → false
+      //in1To10(11, true) → true
+
+    public boolean in1To10(int n, boolean outsideMode) {
+        if ((n >= 1 && n <= 10) && !outsideMode)
+            return true;
+        else if ((n <= 1 || n >= 10) && outsideMode)
+            return true;
+        else
+            return false;
+    }
+
+
+    //Return true if the given non-negative number is a multiple of 3 or 5, but not both.
+    //Use the % "mod" operator -- see Introduction to Mod: https://codingbat.com/doc/practice/mod-introduction.html
+      //old35(3) → true
+      //old35(10) → true
+      //old35(15) → false
+
+    public boolean old35(int n) {
+        if (n % 3 == 0 && n % 5 == 0)
+            return false;
+        else if (n % 3 == 0 || n % 5 == 0)
+            return true;
+        else
+            return false;
+    }
+
+
+    //Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19 inclusive,
+    // are extra lucky. So if either value is a teen, just return 19.
+      //teenSum(3, 4) → 7
+      //teenSum(10, 13) → 19
+      //teenSum(13, 2) → 19
+
+    public int teenSum(int a, int b) {
+        if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19))
+            return 19;
+        else
+            return a + b;
     }
 }

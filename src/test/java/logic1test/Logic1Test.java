@@ -202,4 +202,99 @@ public class Logic1Test {
         assertEquals(10, testToLogic1.blueTicket(8, 4, 2));
         assertEquals(0, testToLogic1.blueTicket(8, 4, 1));
     }
+
+    //******https://codingbat.com/java/Array-1******second column
+
+    //dateFashion
+    @Test
+    public void testDateFashion() {
+        assertEquals(2, testToLogic1.dateFashion(5, 10));
+        assertEquals(0, testToLogic1.dateFashion(5, 2));
+        assertEquals(1, testToLogic1.dateFashion(5, 5));
+        assertEquals(1, testToLogic1.dateFashion(3, 3));
+        assertEquals(0, testToLogic1.dateFashion(10, 2));
+        assertEquals(0, testToLogic1.dateFashion(2, 9));
+        assertEquals(2, testToLogic1.dateFashion(9, 9));
+        assertEquals(2, testToLogic1.dateFashion(10, 5));
+        assertEquals(0, testToLogic1.dateFashion(2, 2));
+        assertEquals(1, testToLogic1.dateFashion(3, 7));
+        assertEquals(0, testToLogic1.dateFashion(2, 7));
+        assertEquals(0, testToLogic1.dateFashion(6, 2));
+    }
+
+    //sortaSum
+    @Test
+    public void testSortaSum() {
+        assertEquals(7, testToLogic1.sortaSum(3, 4));
+        assertEquals(20, testToLogic1.sortaSum(9, 4));
+        assertEquals(21, testToLogic1.sortaSum(10, 11));
+        assertEquals(9, testToLogic1.sortaSum(12, -3));
+        assertEquals(9, testToLogic1.sortaSum(-3, 12));
+        assertEquals(9, testToLogic1.sortaSum(4, 5));
+        assertEquals(20, testToLogic1.sortaSum(4, 6));
+        assertEquals(21, testToLogic1.sortaSum(14, 7));
+        assertEquals(20, testToLogic1.sortaSum(14, 6));
+    }
+
+    //in1To10
+    @Test
+    public void testIn1To10() {
+        assertTrue(testToLogic1.in1To10(5, false));
+        assertFalse(testToLogic1.in1To10(11, false));
+        assertTrue(testToLogic1.in1To10(11, true));
+        assertTrue(testToLogic1.in1To10(10, false));
+        assertTrue(testToLogic1.in1To10(10, true));
+        assertTrue(testToLogic1.in1To10(9, false));
+        assertFalse(testToLogic1.in1To10(9, true));
+        assertTrue(testToLogic1.in1To10(1, false));
+        assertTrue(testToLogic1.in1To10(1, true));
+        assertFalse(testToLogic1.in1To10(0, false));
+        assertTrue(testToLogic1.in1To10(0, true));
+        assertFalse(testToLogic1.in1To10(-1, false));
+        assertTrue(testToLogic1.in1To10(-1, true));
+        assertFalse(testToLogic1.in1To10(99, false));
+        assertTrue(testToLogic1.in1To10(-99, true));
+    }
+
+    //old35
+    @Test
+    public void testOld35() {
+        assertTrue(testToLogic1.old35(3));
+        assertTrue(testToLogic1.old35(10));
+        assertFalse(testToLogic1.old35(15));
+        assertTrue(testToLogic1.old35(5));
+        assertTrue(testToLogic1.old35(9));
+        assertFalse(testToLogic1.old35(8));
+        assertFalse(testToLogic1.old35(7));
+        assertTrue(testToLogic1.old35(6));
+        assertFalse(testToLogic1.old35(17));
+        assertTrue(testToLogic1.old35(18));
+        assertFalse(testToLogic1.old35(29));
+        assertTrue(testToLogic1.old35(20));
+        assertTrue(testToLogic1.old35(21));
+        assertFalse(testToLogic1.old35(22));
+        assertFalse(testToLogic1.old35(45));
+        assertTrue(testToLogic1.old35(99));
+    }
+
+    //teenSum
+    @Test
+    public void testTeenSum() {
+        assertEquals(7, testToLogic1.teenSum(3, 4));
+        assertEquals(19, testToLogic1.teenSum(10, 13));
+        assertEquals(19, testToLogic1.teenSum(13, 2));
+        assertEquals(19, testToLogic1.teenSum(3, 19));
+        assertEquals(19, testToLogic1.teenSum(13, 13));
+        assertEquals(20, testToLogic1.teenSum(10, 10));
+        assertEquals(19, testToLogic1.teenSum(6, 14));
+        assertEquals(19, testToLogic1.teenSum(15, 2));
+        assertEquals(19, testToLogic1.teenSum(19, 19));
+        assertEquals(19, testToLogic1.teenSum(19, 20));
+        assertEquals(19, testToLogic1.teenSum(2, 18));
+        assertEquals(16, testToLogic1.teenSum(12, 4));
+        assertEquals(22, testToLogic1.teenSum(2, 20));
+        assertEquals(19, testToLogic1.teenSum(2, 17));
+        assertEquals(19, testToLogic1.teenSum(2, 16));
+        assertEquals(13, testToLogic1.teenSum(6, 7));
+    }
 }
