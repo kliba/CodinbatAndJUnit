@@ -1,4 +1,4 @@
-package string1;
+package string1test;
 
 public class String1 {
     //******https://codingbat.com/java/String-1******first column
