@@ -280,4 +280,269 @@ public class Logic1 {
         else
             return a + b;
     }
+
+
+    //Given a string str, if the string starts with "f" return "Fizz". If the string ends with "b" return "Buzz".
+    //If both the "f" and "b" conditions are true, return "FizzBuzz". In all other cases, return the string unchanged.
+    //(See also: FizzBuzz Code) https://codingbat.com/doc/practice/fizzbuzz-code.html
+      //fizzString("fig") → "Fizz"
+      //fizzString("dib") → "Buzz"
+      //fizzString("fib") → "FizzBuzz"
+
+    public String fizzString(String str) {
+        if (str.startsWith("f") && str.endsWith("b")) {
+            return "FizzBuzz";
+        } else if (str.startsWith("f")) {
+            return "Fizz";
+        } else if (str.endsWith("b")) {
+            return "Buzz";
+        } else {
+            return str;
+        }
+    }
+
+
+    //Given three ints, a b c, return true if b is greater than a, and c is greater than b.
+    //However, with the exception that if "bOk" is true, b does not need to be greater than a.
+      //inOrder(1, 2, 4, false) → true
+      //inOrder(1, 2, 1, false) → false
+      //inOrder(1, 1, 2, true) → true
+
+    public boolean inOrder(int a, int b, int c, boolean bOk) {
+        if (bOk && c > b)
+            return true;
+        else if (b > a && c > b)
+            return true;
+        else
+            return false;
+    }
+
+
+    //Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+      //lessBy10(1, 7, 11) → true
+      //lessBy10(1, 7, 10) → false
+      //lessBy10(11, 1, 7) → true
+
+    public boolean lessBy10(int a, int b, int c) {
+        if (a - b >= 10 || a - c >= 10 || b - a >= 10 || b - c >= 10 || c - a >= 10 || c - b >= 10)
+            return true;
+        else
+            return false;
+    }
+
+
+    //You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. If they are
+    //all the value 2, the result is 10. Otherwise if they are all the same, the result is 5.
+    //Otherwise so long as both b and c are different from a, the result is 1. Otherwise the result is 0.
+      //redTicket(2, 2, 2) → 10
+      //redTicket(2, 2, 1) → 0
+      //redTicket(0, 0, 0) → 5
+
+    public int redTicket(int a, int b, int c) {
+        if (a == 2 && b == 2 && c == 2)
+            return 10;
+        else if (a == b && a == c)
+            return 5;
+        else if (a != b && a != c)
+            return 1;
+        else
+            return 0;
+    }
+
+
+    //Given two ints, each in the range 10..99, return true if there is a digit that appears in both numbers,
+    //such as the 2 in 12 and 23. (Note: division, e.g. n/10, gives the left digit while
+    //the % "mod" n%10 gives the right digit.)
+      //shareDigit(12, 23) → true
+      //shareDigit(12, 43) → false
+      //shareDigit(12, 44) → false
+
+    public boolean shareDigit(int a, int b) {
+        return a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b / 10 || a % 10 == b % 10;
+    }
+
+
+    //The squirrels in Palo Alto spend most of the day playing. In particular, they play if the
+    //temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is
+    //100 instead of 90. Given an int temperature and a boolean isSummer,
+    //return true if the squirrels play and false otherwise.
+      //squirrelPlay(70, false) → true
+      //squirrelPlay(95, false) → false
+      //squirrelPlay(95, true) → true
+
+    public boolean squirrelPlay(int temp, boolean isSummer) {
+        if (temp >= 60 && temp <= 90 && !isSummer)
+            return true;
+        else if (temp >= 60 && temp <= 100 && isSummer)
+            return true;
+        else
+            return false;
+    }
+
+
+    //Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if
+    //we are on vacation, return a string of the form "7:00" indicating when the alarm clock should ring.
+    //Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00".
+    //Unless we are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off".
+      //alarmClock(1, false) → "7:00"
+      //alarmClock(5, false) → "7:00"
+      //alarmClock(0, false) → "10:00"
+
+    public String alarmClock(int day, boolean vacation) {
+        if(vacation){
+            if( day == 0 || day == 6){
+                return "off";
+            }else{
+                return "10:00";
+            }
+        }else{
+            if(day == 0 || day == 6){
+                return "10:00";
+            }else{
+                return "7:00";
+            }
+        }
+    }
+
+
+    //We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
+    //Return true if the given non-negative number is special. Use the % "mod" operator
+    //-- see Introduction to Mod: https://codingbat.com/doc/practice/mod-introduction.html
+      //specialEleven(22) → true
+      //specialEleven(23) → true
+      //specialEleven(24) → false
+
+    public boolean specialEleven(int n) {
+        if (n % 11 == 0 || n % 11 == 1)
+            return true;
+        else
+            return false;
+    }
+
+    //Return true if the given non-negative number is 1 or 2 less than a multiple of 20.
+    //So for example 38 and 39 return true, but 40 returns false. See also: Introduction to Mod
+    //https://codingbat.com/doc/practice/mod-introduction.html
+      //less20(18) → true
+      //less20(19) → true
+      //less20(20) → false
+
+    public boolean less20(int n) {
+        if (n % 20 == 18 || n % 20 == 19)
+            return true;
+        else
+            return false;
+    }
+
+
+    //Your cell phone rings. Return true if you should answer it. Normally you answer, except in the morning
+    //you only answer if it is your mom calling. In all cases, if you are asleep, you do not answer.
+      //answerCell(false, false, false) → true
+      //answerCell(false, false, true) → false
+      //answerCell(true, false, false) → false
+
+    public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        if (isAsleep)
+            return false;
+        else if (isMom)
+            return true;
+        else if (!isMorning)
+            return true;
+        else
+            return false;
+    }
+
+
+    //Given an int n, return the string form of the number followed by "!". So the int 6 yields "6!".
+    //Except if the number is divisible by 3 use "Fizz" instead of the number, and if the number
+    //is divisible by 5 use "Buzz", and if divisible by both 3 and 5, use "FizzBuzz".
+    //Note: the % "mod" operator computes the remainder after division, so 23 % 10 yields 3.
+    //What will the remainder be when one number divides evenly into another?
+    //(See also: FizzBuzz Code and Introduction to Mod)
+    //https://codingbat.com/doc/practice/fizzbuzz-code.html
+    //https://codingbat.com/doc/practice/mod-introduction.html
+      //fizzString2(1) → "1!"
+      //fizzString2(2) → "2!"
+      //fizzString2(3) → "Fizz!"
+
+    public String fizzString2(int n) {
+        if (n % 3 == 0 && n % 5 == 0)
+            return "FizzBuzz!";
+        else if (n % 3 == 0)
+            return "Fizz!";
+        else if (n % 5 == 0)
+            return "Buzz!";
+        else
+            return n + "!";
+    }
+
+
+    //Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or 5 6 7,
+    //but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true, equality is allowed,
+    //such as 5 5 7 or 5 5 5.
+      //inOrderEqual(2, 5, 11, false) → true
+      //inOrderEqual(5, 7, 6, false) → false
+      //inOrderEqual(5, 5, 7, true) → true
+
+    public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+        if (a < b && b < c)
+            return true;
+        else if (equalOk && a <= b && b <= c)
+            return true;
+        else
+            return false;
+    }
+
+
+    //Return the sum of two 6-sided dice rolls, each in the range 1..6.
+    //However, if noDoubles is true, if the two dice show the same value, increment one die to the next value,
+    //wrapping around to 1 if its value was 6.
+      //withoutDoubles(2, 3, true) → 5
+      //withoutDoubles(3, 3, true) → 7
+      //withoutDoubles(3, 3, false) → 6
+
+    public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        if (noDoubles) {
+            if (die1 == die2) {
+                if (die1 != 6)
+                    return die1 + 1 + die2;
+                else
+                    return 1 + die2;
+            }
+        }
+        return die1 + die2;
+    }
+
+
+    //You have a green lottery ticket, with ints a, b, and c on it. If the numbers are all different
+    //from each other, the result is 0. If all of the numbers are the same, the result is 20.
+    //If two of the numbers are the same, the result is 10.
+      //greenTicket(1, 2, 3) → 0
+      //greenTicket(2, 2, 2) → 20
+      //greenTicket(1, 1, 2) → 10
+
+    public int greenTicket(int a, int b, int c) {
+        if (a == b && b == c)
+            return 20;
+        else if (a == b || b == c || a == c)
+            return 10;
+        else
+            return 0;
+    }
+
+
+    //Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same number of digits as a.
+    //If the sum has more digits than a, just return a without b.
+    //(Note: one way to compute the number of digits of a non-negative int n is to convert it to a string with
+    //String.valueOf(n) and then check the length of the string.)
+      //sumLimit(2, 3) → 5
+      //sumLimit(8, 3) → 8
+      //sumLimit(8, 1) → 9
+
+    public int sumLimit(int a, int b) {
+        if (String.valueOf(a).length() == String.valueOf(a + b).length())
+            return a + b;
+        else
+            return a;
+    }
+
 }

@@ -247,5 +247,241 @@ public class App {
         myLogic.teenSum(2, 17);
         myLogic.teenSum(2, 16);
         myLogic.teenSum(6, 7);
+
+        //fizzString
+        myLogic.fizzString("fig");
+        myLogic.fizzString("dib");
+        myLogic.fizzString("fib");
+        myLogic.fizzString("abc");
+        myLogic.fizzString("fooo");
+        myLogic.fizzString("booo");
+        myLogic.fizzString("ooob");
+        myLogic.fizzString("fooob");
+        myLogic.fizzString("f");
+        myLogic.fizzString("b");
+        myLogic.fizzString("abcb");
+        myLogic.fizzString("Hello");
+        myLogic.fizzString("Hellob");
+        myLogic.fizzString("af");
+        myLogic.fizzString("bf");
+        myLogic.fizzString("fb");
+
+        //inOrder
+        myLogic.inOrder(1, 2, 4, false);
+        myLogic.inOrder(1, 2, 1, false);
+        myLogic.inOrder(1, 1, 2, true);
+        myLogic.inOrder(3, 2, 4, false);
+        myLogic.inOrder(2, 3, 4, false);
+        myLogic.inOrder(3, 2, 4, true);
+        myLogic.inOrder(4, 2, 2, true);
+        myLogic.inOrder(4, 5, 2, true);
+        myLogic.inOrder(2, 4, 6, true);
+        myLogic.inOrder(7, 9, 10, false);
+        myLogic.inOrder(7, 5, 6, true);
+        myLogic.inOrder(7, 5, 4, true);
+
+        //lessBy10
+        myLogic.lessBy10(1, 7, 11);
+        myLogic.lessBy10(1, 7, 10);
+        myLogic.lessBy10(11, 1, 7);
+        myLogic.lessBy10(10, 7, 1);
+        myLogic.lessBy10(-10, 2, 2);
+        myLogic.lessBy10(2, 11, 11);
+        myLogic.lessBy10(3, 3, 30);
+        myLogic.lessBy10(3, 3, 3);
+        myLogic.lessBy10(10, 1, 11);
+        myLogic.lessBy10(10, 11, 1);
+        myLogic.lessBy10(10, 11, 2);
+        myLogic.lessBy10(3, 30, 3);
+        myLogic.lessBy10(2, 2, -8);
+        myLogic.lessBy10(2, 8, 12);
+
+        //redTicket
+        myLogic.redTicket(2, 2, 2);
+        myLogic.redTicket(2, 2, 1);
+        myLogic.redTicket(0, 0, 0);
+        myLogic.redTicket(2, 0, 0);
+        myLogic.redTicket(1, 1, 1);
+        myLogic.redTicket(1, 2, 1);
+        myLogic.redTicket(1, 2, 0);
+        myLogic.redTicket(0, 2, 2);
+        myLogic.redTicket(1, 2, 2);
+        myLogic.redTicket(0, 2, 0);
+        myLogic.redTicket(1, 1, 2);
+
+        //shareDigit
+        myLogic.shareDigit(12, 23);
+        myLogic.shareDigit(12, 43);
+        myLogic.shareDigit(12, 44);
+        myLogic.shareDigit(23, 12);
+        myLogic.shareDigit(23, 39);
+        myLogic.shareDigit(23, 19);
+        myLogic.shareDigit(30, 90);
+        myLogic.shareDigit(30, 91);
+        myLogic.shareDigit(55, 55);
+        myLogic.shareDigit(55, 44);
+
+        //squirrelPlay
+        myLogic.squirrelPlay(70, false);
+        myLogic.squirrelPlay(95, false);
+        myLogic.squirrelPlay(95, true);
+        myLogic.squirrelPlay(90, false);
+        myLogic.squirrelPlay(90, true);
+        myLogic.squirrelPlay(50, false);
+        myLogic.squirrelPlay(50, true);
+        myLogic.squirrelPlay(100, false);
+        myLogic.squirrelPlay(100, true);
+        myLogic.squirrelPlay(105, true);
+        myLogic.squirrelPlay(59, false);
+        myLogic.squirrelPlay(59, true);
+        myLogic.squirrelPlay(60, false);
+
+        //alarmClock
+        myLogic.alarmClock(1, false);
+        myLogic.alarmClock(5, false);
+        myLogic.alarmClock(0, false);
+        myLogic.alarmClock(6, false);
+        myLogic.alarmClock(0, true);
+        myLogic.alarmClock(6, true);
+        myLogic.alarmClock(1, true);
+        myLogic.alarmClock(3, true);
+        myLogic.alarmClock(5, true);
+
+        //specialEvent
+        myLogic.specialEleven(22);
+        myLogic.specialEleven(23);
+        myLogic.specialEleven(24);
+        myLogic.specialEleven(21);
+        myLogic.specialEleven(11);
+        myLogic.specialEleven(12);
+        myLogic.specialEleven(10);
+        myLogic.specialEleven(9);
+        myLogic.specialEleven(8);
+        myLogic.specialEleven(0);
+        myLogic.specialEleven(1);
+        myLogic.specialEleven(2);
+        myLogic.specialEleven(121);
+        myLogic.specialEleven(122);
+        myLogic.specialEleven(123);
+        myLogic.specialEleven(46);
+        myLogic.specialEleven(49);
+        myLogic.specialEleven(52);
+        myLogic.specialEleven(54);
+        myLogic.specialEleven(55);
+
+        //less20
+        myLogic.less20(18);
+        myLogic.less20(19);
+        myLogic.less20(20);
+        myLogic.less20(8);
+        myLogic.less20(17);
+        myLogic.less20(23);
+        myLogic.less20(25);
+        myLogic.less20(30);
+        myLogic.less20(31);
+        myLogic.less20(58);
+        myLogic.less20(59);
+        myLogic.less20(60);
+        myLogic.less20(61);
+        myLogic.less20(62);
+        myLogic.less20(1017);
+        myLogic.less20(1018);
+        myLogic.less20(1019);
+        myLogic.less20(1020);
+        myLogic.less20(1020);
+        myLogic.less20(1021);
+        myLogic.less20(1022);
+        myLogic.less20(1023);
+        myLogic.less20(37);
+
+        //answerCell
+        myLogic.answerCell(false, false, false);
+        myLogic.answerCell(false, false, true);
+        myLogic.answerCell(true, false, false);
+        myLogic.answerCell(true, true, false);
+        myLogic.answerCell(false, true, false);
+        myLogic.answerCell(true, true, true);
+
+        //fizzString2
+        myLogic.fizzString2(1);
+        myLogic.fizzString2(2);
+        myLogic.fizzString2(3);
+        myLogic.fizzString2(4);
+        myLogic.fizzString2(5);
+        myLogic.fizzString2(6);
+        myLogic.fizzString2(7);
+        myLogic.fizzString2(8);
+        myLogic.fizzString2(9);
+        myLogic.fizzString2(15);
+        myLogic.fizzString2(16);
+        myLogic.fizzString2(17);
+        myLogic.fizzString2(18);
+        myLogic.fizzString2(19);
+        myLogic.fizzString2(21);
+        myLogic.fizzString2(44);
+        myLogic.fizzString2(45);
+        myLogic.fizzString2(100);
+
+        //inOrderEqual
+        myLogic.inOrderEqual(2, 5, 11, false);
+        myLogic.inOrderEqual(5, 7, 6, false);
+        myLogic.inOrderEqual(5, 5, 7, true);
+        myLogic.inOrderEqual(5, 5, 7, false);
+        myLogic.inOrderEqual(2, 5, 4, false);
+        myLogic.inOrderEqual(3, 4, 3, false);
+        myLogic.inOrderEqual(3, 4, 4, false);
+        myLogic.inOrderEqual(3, 4, 3, true);
+        myLogic.inOrderEqual(3, 4, 4, true);
+        myLogic.inOrderEqual(1, 5, 5, true);
+        myLogic.inOrderEqual(5, 5, 5, true);
+        myLogic.inOrderEqual(2, 2, 1, true);
+        myLogic.inOrderEqual(9, 2, 2, true);
+        myLogic.inOrderEqual(0, 1, 0, true);
+
+        //withoutDoubles
+        myLogic.withoutDoubles(2, 3, true);
+        myLogic.withoutDoubles(3, 3, true);
+        myLogic.withoutDoubles(3, 3, false);
+        myLogic.withoutDoubles(2, 3, false);
+        myLogic.withoutDoubles(5, 4, true);
+        myLogic.withoutDoubles(5, 4, false);
+        myLogic.withoutDoubles(5, 5, true);
+        myLogic.withoutDoubles(5, 5, false);
+        myLogic.withoutDoubles(6, 6, true);
+        myLogic.withoutDoubles(6, 6, false);
+        myLogic.withoutDoubles(1, 6, true);
+        myLogic.withoutDoubles(6, 1, false);
+
+        //greenTicket
+        myLogic.greenTicket(1, 2, 3);
+        myLogic.greenTicket(2, 2, 2);
+        myLogic.greenTicket(1, 1, 2);
+        myLogic.greenTicket(2, 1, 1);
+        myLogic.greenTicket(1, 2, 1);
+        myLogic.greenTicket(3, 2, 1);
+        myLogic.greenTicket(0, 0, 0);
+        myLogic.greenTicket(2, 0, 0);
+        myLogic.greenTicket(0, 9, 10);
+        myLogic.greenTicket(0, 10, 0);
+        myLogic.greenTicket(9, 9, 9);
+        myLogic.greenTicket(9, 0, 9);
+
+        //sumLimit
+        myLogic.sumLimit(2, 3);
+        myLogic.sumLimit(8, 3);
+        myLogic.sumLimit(8, 1);
+        myLogic.sumLimit(11, 39);
+        myLogic.sumLimit(11, 99);
+        myLogic.sumLimit(0, 0);
+        myLogic.sumLimit(99, 0);
+        myLogic.sumLimit(99, 1);
+        myLogic.sumLimit(123, 1);
+        myLogic.sumLimit(1, 123);
+        myLogic.sumLimit(23, 60);
+        myLogic.sumLimit(23, 80);
+        myLogic.sumLimit(9000, 1);
+        myLogic.sumLimit(90000000, 1);
+        myLogic.sumLimit(9000, 1000);
+
     }
 }
