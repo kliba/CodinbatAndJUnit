@@ -2,7 +2,7 @@ package logic2;
 
 public class Logic2 {
 
-    //******https://codingbat.com/java/Logic-1******first column
+    //******https://codingbat.com/java/Logic-2******first column
 
     //We want to make a row of bricks that is goal inches long. We have a number of small bricks
     //(1 inch each) and big bricks (5 inches each).
@@ -96,6 +96,7 @@ public class Logic2 {
         }
     }
 
+    //******https://codingbat.com/java/Logic-2******second column
 
     //Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values,
     //it does not count towards the sum.
@@ -175,6 +176,8 @@ public class Logic2 {
     }
 
 
+    //******https://codingbat.com/java/Logic-2******third column
+
     //Given 3 int values, a b c, return their sum. However, if one of the values is 13 then
     //it does not count towards the sum and values to its right do not count.
     //So for example, if b is 13, then both b and c do not count.
@@ -235,7 +238,15 @@ public class Logic2 {
 
     public int makeChocolate(int small, int big, int goal) {
 
-    return 0;
+        //if the total weight is smaller than the goal OR small is smaller than the goal remaining of the goal
+        //we return -1
+        if (big * 5 + small < goal | small < goal % 5) return -1;
+
+        //if weight of big is not bigger than the goal, we return with goal minus weight of big;
+        if (big * 5 <= goal) return goal - big * 5;
+
+        //any other way we return with the remaining.
+        return goal % 5;
     }
 
 }
