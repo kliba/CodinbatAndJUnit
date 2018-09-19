@@ -142,5 +142,77 @@ public class App {
         myString2.endOther("ab", "ab12");
         myString2.endOther("ab", "12ab");
 
+        //xyBalance
+        myString2.xyBalance("aaxbby");
+        myString2.xyBalance("aaxbb");
+        myString2.xyBalance("yaaxbb");
+        myString2.xyBalance("yaaxbby");
+        myString2.xyBalance("xaxxbby");
+        myString2.xyBalance("xaxxbbyx");
+        myString2.xyBalance("xxbxy");
+        myString2.xyBalance("xxbx");
+        myString2.xyBalance("bbb");
+        myString2.xyBalance("bxbb");
+        myString2.xyBalance("bxyb");
+        myString2.xyBalance("xy");
+        myString2.xyBalance("y");
+        myString2.xyBalance("x");
+        myString2.xyBalance("");
+        myString2.xyBalance("yxyxyxyx");
+        myString2.xyBalance("yxyxyxyxy");
+        myString2.xyBalance("12xabxxydxyxyzz");
+
+        //repeatFront
+        myString2.repeatEnd("Chocolate", 4);
+        myString2.repeatEnd("Chocolate", 3);
+        myString2.repeatEnd("Ice Cream", 2);
+        myString2.repeatEnd("Ice Cream", 1);
+        myString2.repeatEnd("Ice Cream", 0);
+        myString2.repeatEnd("xyz", 3);
+        myString2.repeatEnd("", 0);
+        myString2.repeatEnd("Java", 4);
+        myString2.repeatEnd("Java", 1);
+
+        //xyzMiddle
+        myString2.xyzMiddle("AAxyzBB");
+        myString2.xyzMiddle("AxyzBB");
+        myString2.xyzMiddle("AxyzBBB");
+        myString2.xyzMiddle("AxyzBBBB");
+        myString2.xyzMiddle("AAAxyzB");
+        myString2.xyzMiddle("AAAxyzBB");
+        myString2.xyzMiddle("AAAAxyzBB");
+        myString2.xyzMiddle("AAAAAxyzBBB");
+        myString2.xyzMiddle("1x345xyz12x4");
+        myString2.xyzMiddle("xyzAxyzBBB");
+        myString2.xyzMiddle("xyzAxyzBxyz");
+        myString2.xyzMiddle("xyzxyzAxyzBxyzxyz");
+        myString2.xyzMiddle("xyzxyzxyzBxyzxyz");
+        myString2.xyzMiddle("xyzxyzAxyzxyzxyz");
+        myString2.xyzMiddle("xyzxyzAxyzxyzxy");
+        myString2.xyzMiddle("AxyzxyzBB");
+        myString2.xyzMiddle("");
+        myString2.xyzMiddle("x");
+        myString2.xyzMiddle("xy");
+        myString2.xyzMiddle("xyz");
+        myString2.xyzMiddle("xyzz");
+
+        //oneTwo
+        myString2.oneTwo("abc");
+        myString2.oneTwo("tca");
+        myString2.oneTwo("tcagdo");
+        myString2.oneTwo("chocolate");
+        myString2.oneTwo("1234567890");
+        myString2.oneTwo("xabxabxabxabxabxabxab");
+        myString2.oneTwo("abcdefx");
+        myString2.oneTwo("abcdefxy");
+        myString2.oneTwo("abcdefxyz");
+        myString2.oneTwo("");
+        myString2.oneTwo("x");
+        myString2.oneTwo("xy");
+        myString2.oneTwo("yxz");
+        myString2.oneTwo("abcdefghijklkmnopqrstuvwxyz1234567890");
+        myString2.oneTwo("abcdefghijklkmnopqrstuvwxyz123456789");
+        myString2.oneTwo("abcdefghijklkmnopqrstuvwxyz12345678");
+
     }
 }

@@ -172,4 +172,88 @@ public class String2Test {
         assertFalse(testString2.endOther("ab", "ab12"));
         assertTrue(testString2.endOther("ab", "12ab"));
     }
+
+    //xyBalance
+    @Test
+    public void testXyBalance() {
+        assertTrue(testString2.xyBalance("aaxbby"));
+        assertFalse(testString2.xyBalance("aaxbb"));
+        assertFalse(testString2.xyBalance("yaaxbb"));
+        assertTrue(testString2.xyBalance("yaaxbby"));
+        assertTrue(testString2.xyBalance("xaxxbby"));
+        assertFalse(testString2.xyBalance("xaxxbbyx"));
+        assertTrue(testString2.xyBalance("xxbxy"));
+        assertFalse(testString2.xyBalance("xxbx"));
+        assertTrue(testString2.xyBalance("bbb"));
+        assertFalse(testString2.xyBalance("bxbb"));
+        assertTrue(testString2.xyBalance("bxyb"));
+        assertTrue(testString2.xyBalance("xy"));
+        assertTrue(testString2.xyBalance("y"));
+        assertFalse(testString2.xyBalance("x"));
+        assertTrue(testString2.xyBalance(""));
+        assertFalse(testString2.xyBalance("yxyxyxyx"));
+        assertTrue(testString2.xyBalance("yxyxyxyxy"));
+        assertTrue(testString2.xyBalance("12xabxxydxyxyzz"));
+    }
+
+    //repeatFront
+    @Test
+    public void testRepeatFront() {
+        assertEquals("ChocChoChC", testString2.repeatFront("Chocolate", 4));
+        assertEquals("ChoChC", testString2.repeatFront("Chocolate", 3));
+        assertEquals("IcI", testString2.repeatFront("Ice Cream", 2));
+        assertEquals("I", testString2.repeatFront("Ice Cream", 1));
+        assertEquals("", testString2.repeatFront("Ice Cream", 0));
+        assertEquals("xyzxyx", testString2.repeatFront("xyz", 3));
+        assertEquals("", testString2.repeatFront("", 0));
+        assertEquals("JavaJavJaJ", testString2.repeatFront("Java", 4));
+        assertEquals("J", testString2.repeatFront("Java", 1));
+    }
+
+    //xyzMiddle
+    @Test
+    public void testXyzMiddle() {
+        assertTrue(testString2.xyzMiddle("AAxyzBB"));
+        assertTrue(testString2.xyzMiddle("AxyzBB"));
+        assertFalse(testString2.xyzMiddle("AxyzBBB"));
+        assertFalse(testString2.xyzMiddle("AxyzBBBB"));
+        assertFalse(testString2.xyzMiddle("AAAxyzB"));
+        assertTrue(testString2.xyzMiddle("AAAxyzBB"));
+        assertFalse(testString2.xyzMiddle("AAAAxyzBB"));
+        assertFalse(testString2.xyzMiddle("AAAAAxyzBBB"));
+        assertTrue(testString2.xyzMiddle("1x345xyz12x4"));
+        assertTrue(testString2.xyzMiddle("xyzAxyzBBB"));
+        assertTrue(testString2.xyzMiddle("xyzAxyzBxyz"));
+        assertTrue(testString2.xyzMiddle("xyzxyzAxyzBxyzxyz"));
+        assertTrue(testString2.xyzMiddle("xyzxyzxyzBxyzxyz"));
+        assertTrue(testString2.xyzMiddle("xyzxyzAxyzxyzxyz"));
+        assertFalse(testString2.xyzMiddle("xyzxyzAxyzxyzxy"));
+        assertFalse(testString2.xyzMiddle("AxyzxyzBB"));
+        assertFalse(testString2.xyzMiddle(""));
+        assertFalse(testString2.xyzMiddle("x"));
+        assertFalse(testString2.xyzMiddle("xy"));
+        assertTrue(testString2.xyzMiddle("xyz"));
+        assertTrue(testString2.xyzMiddle("xyzz"));
+    }
+
+    //oneTwo
+    @Test
+    public void testOneTwo() {
+        assertEquals("bca", testString2.oneTwo("abc"));
+        assertEquals("cat", testString2.oneTwo("tca"));
+        assertEquals("catdog", testString2.oneTwo("tcagdo"));
+        assertEquals("hocolctea", testString2.oneTwo("chocolate"));
+        assertEquals("231564897", testString2.oneTwo("1234567890"));
+        assertEquals("abxabxabxabxabxabxabx", testString2.oneTwo("xabxabxabxabxabxabxab"));
+        assertEquals("bcaefd", testString2.oneTwo("abcdefx"));
+        assertEquals("bcaefd", testString2.oneTwo("abcdefxy"));
+        assertEquals("bcaefdyzx", testString2.oneTwo("abcdefxyz"));
+        assertEquals("", testString2.oneTwo(""));
+        assertEquals("", testString2.oneTwo("x"));
+        assertEquals("", testString2.oneTwo("xy"));
+        assertEquals("yzx", testString2.oneTwo("xyz"));
+        assertEquals("bcaefdhigkljmnkpqostrvwuyzx231564897", testString2.oneTwo("abcdefghijklkmnopqrstuvwxyz1234567890"));
+        assertEquals("bcaefdhigkljmnkpqostrvwuyzx231564897", testString2.oneTwo("abcdefghijklkmnopqrstuvwxyz123456789"));
+        assertEquals("bcaefdhigkljmnkpqostrvwuyzx231564", testString2.oneTwo("abcdefghijklkmnopqrstuvwxyz12345678"));
+    }
 }

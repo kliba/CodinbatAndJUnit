@@ -1,5 +1,8 @@
 package string2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class String2 {
 
     //******https://codingbat.com/java/String-1******first column
@@ -202,5 +205,106 @@ public class String2 {
 
     public boolean xyBalance(String str) {
 
+        List<Integer> listOfX = new ArrayList<>();
+        List<Integer> listOfY = new ArrayList<>();
+
+        //collects the position of x and y then add them to the relevant list object
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'x') {
+                listOfX.add(i);
+            } else if (str.charAt(i) == 'y') {
+                listOfY.add(i);
+            }
+        }
+
+        if (listOfX.size() == 0 && listOfY.size() == 0) {
+            return true;
+        } else if (listOfX.size() == 0) {
+            return true;
+        } else if (listOfY.size() == 0) {
+            return false;
+        } else if ( listOfX.get(listOfX.size() - 1) > listOfY.get(listOfY.size() - 1)) {
+            return false;
+        } else {
+            return true;
+        }
     }
+
+
+
+    //Given a string and an int n, return a string made of the first n characters of the string,
+    //followed by the first n-1 characters of the string, and so on.
+    //You may assume that n is between 0 and the length of the string, inclusive
+    //(i.e. n >= 0 and n <= str.length()).
+      //repeatFront("Chocolate", 4) → "ChocChoChC"
+      //repeatFront("Chocolate", 3) → "ChoChC"
+      //repeatFront("Ice Cream", 2) → "IcI"
+
+    public String repeatFront(String str, int n) {
+        String returnValue = str.substring(0, n);
+
+        for (int i = n - 1; i > 0; i--) {
+            returnValue += returnValue.substring(0, i);
+        }
+
+        return returnValue;
+    }
+
+
+    //Given a string, does "xyz" appear in the middle of the string? To define middle, we'll say that
+    //the number of chars to the left and right of the "xyz" must differ by at most one.
+    //This problem is harder than it looks.
+      //xyzMiddle("AAxyzBB") → true
+      //xyzMiddle("AxyzBB") → true
+      //xyzMiddle("AxyzBBB") → false
+
+    public boolean xyzMiddle(String str) {
+        String xyz = "xyz";
+        int length = str.length();
+        int beforeCount = 0;
+        int afterCount = 0;
+
+        if (length < 3) {
+            return false;
+        }
+
+        if (xyz.equals(str)) {
+            return true;
+        }
+
+        for (int i = 0; i < length - 3; i++) {
+
+            if (xyz.equals(str.substring(i, i + 3))) {
+                afterCount = length - (i + 3);
+                beforeCount = length - afterCount - xyz.length();
+
+                if (afterCount == beforeCount ||
+                        afterCount == beforeCount - 1 ||
+                        afterCount - 1 == beforeCount) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+    //Given a string, compute a new string by moving the first char to come after the next two chars,
+    //so "abc" yields "bca". Repeat this process for each subsequent group of 3 chars,
+    //so "abcdef" yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
+      //oneTwo("abc") → "bca"
+      //oneTwo("tca") → "cat"
+      //oneTwo("tcagdo") → "catdog"
+
+    public String oneTwo(String str) {
+        String result = "";
+
+        for (int i = 0; i < str.length() - 2; i = i + 3) {
+            result = result + str.charAt(i + 1) + str.charAt(i + 2) + str.charAt(i);
+        }
+
+        return result;
+    }
+
 }
