@@ -214,5 +214,124 @@ public class App {
         myString2.oneTwo("abcdefghijklkmnopqrstuvwxyz123456789");
         myString2.oneTwo("abcdefghijklkmnopqrstuvwxyz12345678");
 
+        //plusOut
+        myString2.plusOut("12xy34", "xy");
+        myString2.plusOut("12xy34", "1");
+        myString2.plusOut("12xy34xyabcxy", "xy");
+        myString2.plusOut("abXYabcXYZ", "ab");
+        myString2.plusOut("abXYabcXYZ", "abc");
+        myString2.plusOut("abXYabcXYZ", "XY");
+        myString2.plusOut("abXYxyzXYZ", "XYZ");
+        myString2.plusOut("--++ab", "++");
+        myString2.plusOut("aaxxxxbb", "xx");
+        myString2.plusOut("123123", "3");
+
+        //******https://codingbat.com/java/String-1******third column
+
+        //catDog
+        myString2.catDog("catdog");
+        myString2.catDog("catcat");
+        myString2.catDog("1cat1cadodog");
+        myString2.catDog("catxxdogxxxdog");
+        myString2.catDog("catxdogxdogxcat");
+        myString2.catDog("catxdogxdogxca");
+        myString2.catDog("dogdogcat");
+        myString2.catDog("dogogcat");
+        myString2.catDog("dog");
+        myString2.catDog("cat");
+        myString2.catDog("ca");
+        myString2.catDog("c");
+        myString2.catDog("");
+
+        //xyzThere
+        myString2.xyzThere("abcxyz");
+        myString2.xyzThere("abc.xyz");
+        myString2.xyzThere("xyz.abc");
+        myString2.xyzThere("abcxy");
+        myString2.xyzThere("xyz");
+        myString2.xyzThere("xy");
+        myString2.xyzThere("x");
+        myString2.xyzThere("");
+        myString2.xyzThere("abc.xyzxyz");
+        myString2.xyzThere("abc.xxyz");
+        myString2.xyzThere(".xyz");
+        myString2.xyzThere("12.xyz");
+        myString2.xyzThere("12xyz");
+        myString2.xyzThere("1.xyz.xyz2.xyz");
+
+        //mixString
+        myString2.mixString("abc", "xyz");
+        myString2.mixString("Hi", "There");
+        myString2.mixString("xxxx", "There");
+        myString2.mixString("xxx", "X");
+        myString2.mixString("2/", "27 around");
+        myString2.mixString("", "Hello");
+        myString2.mixString("Abc", "");
+        myString2.mixString("", "");
+        myString2.mixString("a", "b");
+        myString2.mixString("ax", "b");
+        myString2.mixString("a", "bx");
+        myString2.mixString("So", "Long");
+        myString2.mixString("Long", "So");
+
+        //repeatSeparator
+        myString2.repeatSeparator("Word", "X", 3);
+        myString2.repeatSeparator("This", "And", 2);
+        myString2.repeatSeparator("This", "And", 1);
+        myString2.repeatSeparator("Hi", "-n-", 2);
+        myString2.repeatSeparator("AAA", "", 1);
+        myString2.repeatSeparator("AAA", "", 0);
+        myString2.repeatSeparator("A", "B", 5);
+        myString2.repeatSeparator("abc", "XX", 3);
+        myString2.repeatSeparator("abc", "XX", 2);
+        myString2.repeatSeparator("abc", "XX", 1);
+        myString2.repeatSeparator("XYZ", "a", 2);
+
+        //getSandwich
+        myString2.getSandwich("breadjambread");
+        myString2.getSandwich("xxbreadjambreadyy");
+        myString2.getSandwich("xxbreadyy");
+        myString2.getSandwich("xxbreadbreadjambreadyy");
+        myString2.getSandwich("breadAbread");
+        myString2.getSandwich("breadbread");
+        myString2.getSandwich("abcbreaz");
+        myString2.getSandwich("xyz");
+        myString2.getSandwich("");
+        myString2.getSandwich("breadbreaxbread");
+        myString2.getSandwich("breaxbreadybread");
+        myString2.getSandwich("breadbreadbreadbread");
+
+        //zipZap
+        myString2.zipZap("zipXzap");
+        myString2.zipZap("zopzop");
+        myString2.zipZap("zzzopzop");
+        myString2.zipZap("zibzap");
+        myString2.zipZap("zip");
+        myString2.zipZap("zi");
+        myString2.zipZap("z");
+        myString2.zipZap("");
+        myString2.zipZap("zzp");
+        myString2.zipZap("abcppp");
+        myString2.zipZap("azbcppp");
+        myString2.zipZap("azbcpzpp");
+
+
+        //wordEnds
+        myString2.wordEnds("abcXY123XYijk", "XY");
+        myString2.wordEnds("XY123XY", "XY");
+        myString2.wordEnds("XY1XY", "XY");
+        myString2.wordEnds("XYXY", "XY");
+        myString2.wordEnds("XY", "XY");
+        myString2.wordEnds("Hi", "XY");
+        myString2.wordEnds("", "XY");
+        myString2.wordEnds("abc1xyz1i1j", "1");
+        myString2.wordEnds("abc1xyz1", "1");
+        myString2.wordEnds("abc1xyz11", "1");
+        myString2.wordEnds("abc1xyz1abc", "abc");
+        myString2.wordEnds("abc1xyz1abc", "b");
+        myString2.wordEnds("abc1abc1abc", "abc");
     }
+
+
+
 }

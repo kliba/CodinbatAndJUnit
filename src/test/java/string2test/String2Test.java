@@ -256,4 +256,144 @@ public class String2Test {
         assertEquals("bcaefdhigkljmnkpqostrvwuyzx231564897", testString2.oneTwo("abcdefghijklkmnopqrstuvwxyz123456789"));
         assertEquals("bcaefdhigkljmnkpqostrvwuyzx231564", testString2.oneTwo("abcdefghijklkmnopqrstuvwxyz12345678"));
     }
+
+    //plusOut
+    @Test
+    public void testPlusOut() {
+        assertEquals("++xy++"	, testString2.plusOut("12xy34", "xy"));
+        assertEquals("1+++++"	, testString2.plusOut("12xy34", "1"));
+        assertEquals("++xy++xy+++xy"	, testString2.plusOut("12xy34xyabcxy", "xy"));
+        assertEquals("ab++ab++++"	, testString2.plusOut("abXYabcXYZ", "ab"));
+        assertEquals("++++abc+++"	, testString2.plusOut("abXYabcXYZ", "abc"));
+        assertEquals("++XY+++XY+"	, testString2.plusOut("abXYabcXYZ", "XY"));
+        assertEquals("+++++++XYZ"	, testString2.plusOut("abXYxyzXYZ", "XYZ"));
+        assertEquals("++++++"	, testString2.plusOut("--++ab", "++"));
+        assertEquals("++xxxx++"	, testString2.plusOut("aaxxxxbb", "xx"));
+        assertEquals("++3++3"	, testString2.plusOut("123123", "3"));
+    }
+
+    //******https://codingbat.com/java/String-1******third column
+
+    //catDog
+    @Test
+    public void testCatDog() {
+        assertTrue(testString2.catDog("catdog"));
+        assertFalse(testString2.catDog("catcat"));
+        assertTrue(testString2.catDog("1cat1cadodog"));
+        assertFalse(testString2.catDog("catxxdogxxxdog"));
+        assertTrue(testString2.catDog("catxdogxdogxcat"));
+        assertFalse(testString2.catDog("catxdogxdogxca"));
+        assertFalse(testString2.catDog("dogdogcat"));
+        assertTrue(testString2.catDog("dogogcat"));
+        assertFalse(testString2.catDog("dog"));
+        assertFalse(testString2.catDog("cat"));
+        assertTrue(testString2.catDog("ca"));
+        assertTrue(testString2.catDog("c"));
+        assertTrue(testString2.catDog(""));
+    }
+
+    //xyzThere
+    @Test
+    public void testXyzThere() {
+        assertTrue(testString2.xyzThere("abcxyz"));
+        assertFalse(testString2.xyzThere("abc.xyz"));
+        assertTrue(testString2.xyzThere("xyz.abc"));
+        assertFalse(testString2.xyzThere("abcxy"));
+        assertTrue(testString2.xyzThere("xyz"));
+        assertFalse(testString2.xyzThere("xy"));
+        assertFalse(testString2.xyzThere("x"));
+        assertFalse(testString2.xyzThere(""));
+        assertTrue(testString2.xyzThere("abc.xyzxyz"));
+        assertTrue(testString2.xyzThere("abc.xxyz"));
+        assertFalse(testString2.xyzThere(".xyz"));
+        assertFalse(testString2.xyzThere("12.xyz"));
+        assertTrue(testString2.xyzThere("12xyz"));
+        assertFalse(testString2.xyzThere("1.xyz.xyz2.xyz"));
+    }
+
+    //mixString
+    @Test
+    public void testMixString() {
+        assertEquals("axbycz", testString2.mixString("abc", "xyz"));
+        assertEquals("HTihere", testString2.mixString("Hi", "There"));
+        assertEquals("xTxhxexre", testString2.mixString("xxxx", "There"));
+        assertEquals("xXxx", testString2.mixString("xxx", "X"));
+        assertEquals("22/7 around", testString2.mixString("2/", "27 around"));
+        assertEquals("Hello", testString2.mixString("", "Hello"));
+        assertEquals("Abc", testString2.mixString("Abc", ""));
+        assertEquals("", testString2.mixString("", ""));
+        assertEquals("ab", testString2.mixString("a", "b"));
+        assertEquals("abx", testString2.mixString("ax", "b"));
+        assertEquals("abx", testString2.mixString("a", "bx"));
+        assertEquals("SLoong", testString2.mixString("So", "Long"));
+        assertEquals("LSoong", testString2.mixString("Long", "So"));
+    }
+
+    //repeatSeparator
+    @Test
+    public void testRepeatSeparator() {
+        assertEquals("WordXWordXWord", testString2.repeatSeparator("Word", "X", 3));
+        assertEquals("ThisAndThis", testString2.repeatSeparator("This", "And", 2));
+        assertEquals("This", testString2.repeatSeparator("This", "And", 1));
+        assertEquals("Hi-n-Hi", testString2.repeatSeparator("Hi", "-n-", 2));
+        assertEquals("AAA", testString2.repeatSeparator("AAA", "", 1));
+        assertEquals("", testString2.repeatSeparator("AAA", "", 0));
+        assertEquals("ABABABABA", testString2.repeatSeparator("A", "B", 5));
+        assertEquals("abcXXabcXXabc", testString2.repeatSeparator("abc", "XX", 3));
+        assertEquals("abcXXabc", testString2.repeatSeparator("abc", "XX", 2));
+        assertEquals("abc", testString2.repeatSeparator("abc", "XX", 1));
+        assertEquals("XYZaXYZ", testString2.repeatSeparator("XYZ", "a", 2));
+    }
+
+    //getSandwich
+    @Test
+    public void testGetSandwich() {
+        assertEquals("jam", testString2.getSandwich("breadjambread"));
+        assertEquals("jam", testString2.getSandwich("xxbreadjambreadyy"));
+        assertEquals("", testString2.getSandwich("xxbreadyy"));
+        assertEquals("breadjam", testString2.getSandwich("xxbreadbreadjambreadyy"));
+        assertEquals("A", testString2.getSandwich("breadAbread"));
+        assertEquals("", testString2.getSandwich("breadbread"));
+        assertEquals("", testString2.getSandwich("abcbreaz"));
+        assertEquals("", testString2.getSandwich("xyz"));
+        assertEquals("", testString2.getSandwich(""));
+        assertEquals("breax", testString2.getSandwich("breadbreaxbread"));
+        assertEquals("y", testString2.getSandwich("breaxbreadybread"));
+        assertEquals("breadbread", testString2.getSandwich("breadbreadbreadbread"));
+    }
+
+    //zipZap
+    @Test
+    public void testZipZap() {
+        assertEquals("zpXzp", testString2.zipZap("zipXzap"));
+        assertEquals("zpzp", testString2.zipZap("zopzop"));
+        assertEquals("zzzpzp", testString2.zipZap("zzzopzop"));
+        assertEquals("zibzp", testString2.zipZap("zibzap"));
+        assertEquals("zp", testString2.zipZap("zip"));
+        assertEquals("zi", testString2.zipZap("zi"));
+        assertEquals("z", testString2.zipZap("z"));
+        assertEquals("", testString2.zipZap(""));
+        assertEquals("zp", testString2.zipZap("zzp"));
+        assertEquals("abcppp", testString2.zipZap("abcppp"));
+        assertEquals("azbcppp", testString2.zipZap("azbcppp"));
+        assertEquals("azbcpzp", testString2.zipZap("azbcpzpp"));
+    }
+
+    //wordEnd
+    @Test
+    public void testWordEnd() {
+        assertEquals("c13i", testString2.wordEnds("abcXY123XYijk", "XY"));
+        assertEquals("13", testString2.wordEnds("XY123XY", "XY"));
+        assertEquals("11", testString2.wordEnds("XY1XY", "XY"));
+        assertEquals("XY", testString2.wordEnds("XYXY", "XY"));
+        assertEquals("", testString2.wordEnds("XY", "XY"));
+        assertEquals("", testString2.wordEnds("Hi", "XY"));
+        assertEquals("", testString2.wordEnds("", "XY"));
+        assertEquals("cxziij", testString2.wordEnds("abc1xyz1i1j", "1"));
+        assertEquals("cxz", testString2.wordEnds("abc1xyz1", "1"));
+        assertEquals("cxz11", testString2.wordEnds("abc1xyz11", "1"));
+        assertEquals("11", testString2.wordEnds("abc1xyz1abc", "abc"));
+        assertEquals("acac", testString2.wordEnds("abc1xyz1abc", "b"));
+        assertEquals("1111", testString2.wordEnds("abc1abc1abc", "abc"));
+    }
 }

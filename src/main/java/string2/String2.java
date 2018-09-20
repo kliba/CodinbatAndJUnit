@@ -307,4 +307,246 @@ public class String2 {
         return result;
     }
 
+
+    //Given a string and a non-empty word string, return a version of the original String
+    //where all chars have been replaced by pluses ("+"), except for appearances of the word string
+    //which are preserved unchanged.
+      //plusOut("12xy34", "xy") → "++xy++"
+      //plusOut("12xy34", "1") → "1+++++"
+      //plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
+
+    public String plusOut(String str, String word) {
+        int lengthOfStr = str.length();
+        int lengthOfWord = word.length();
+        String out = "";
+
+        for (int i = 0; i < lengthOfStr; i++) {
+
+            if (i <= lengthOfStr - lengthOfWord) {
+                String tmp = str.substring(i, i + lengthOfWord);
+
+                if (tmp.equals(word)) {
+                    out += word;
+                    i += lengthOfWord - 1;
+                } else
+                    out += "+";
+            } else
+                out += "+";
+        }
+        return out;
+    }
+
+
+    //******https://codingbat.com/java/String-1******third column
+
+    //Return true if the string "cat" and "dog" appear the same number of times in the given string.
+      //catDog("catdog") → true
+      //catDog("catcat") → false
+      //catDog("1cat1cadodog") → true
+
+    public boolean catDog(String str) {
+        int dogCounter = 0;
+        int catCounter = 0;
+
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.substring(i, i + 3).equals("cat")) {
+                catCounter++;
+            } else if (str.substring(i, i + 3).equals("dog")) {
+                dogCounter++;
+            }
+        }
+
+        if (catCounter == dogCounter) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    //Return true if the given string contains an appearance of "xyz" where the xyz is not directly
+    //preceeded by a period (.). So "xxyz" counts but "x.xyz" does not.
+      //xyzThere("abcxyz") → true
+      //xyzThere("abc.xyz") → false
+      //xyzThere("xyz.abc") → true
+
+    public boolean xyzThere(String str) {
+        String xyz = "xyz";
+
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.startsWith(xyz)) {
+                return true;
+            } else if (xyz.equals(str.substring(i, i + 3)) && str.charAt(i - 1) != '.') {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+    //Given two strings, a and b, create a bigger string made of the first char of a, the first char of b,
+    //the second char of a, the second char of b, and so on. Any leftover chars go at the end of the result.
+      //mixString("abc", "xyz") → "axbycz"
+      //mixString("Hi", "There") → "HTihere"
+      //mixString("xxxx", "There") → "xTxhxexre"
+
+    public String mixString(String a, String b) {
+        String out = "";
+        int shorterString;
+
+        //adding value for shorter parameter
+        if (a.length() > b.length()) {
+            shorterString = b.length();
+        } else {
+            shorterString = a.length();
+        }
+
+        //doing it if one of the params is empty at least
+        if (a.length() == 0 && b.length() == 0) {
+            return "";
+        } else if (a.length() != 0 && b.length() == 0) {
+            return a;
+        } else if (a.length() == 0) {
+            return b;
+        }
+
+        //mixing the strings if the params are not empties
+        for (int i = 0; i < shorterString; i++) {
+
+            if (b.length() >= a.length() && i == shorterString - 1) {
+                out = out + a.substring(i) + b.substring(i);
+            } else if (a.length() > b.length() && i == shorterString - 1) {
+                out = out + a.charAt(i) + b.substring(i) + a.substring(i + 1);
+            } else {
+                out = out + a.charAt(i) + b.charAt(i);
+            }
+        }
+
+        return out;
+    }
+
+
+    //Given two strings, word and a separator sep, return a big string made of count occurrences of the word,
+    //separated by the separator string.
+      //repeatSeparator("Word", "X", 3) → "WordXWordXWord"
+      //repeatSeparator("This", "And", 2) → "ThisAndThis"
+      //repeatSeparator("This", "And", 1) → "This"
+
+    public String repeatSeparator(String word, String sep, int count) {
+        String bigString = word;
+
+        if (count == 0) {
+            return "";
+        } else if (count == 1) {
+            return bigString;
+        } else {
+            for (int i = 1; i < count; i++) {
+                bigString = bigString + sep + word;
+            }
+        }
+
+        return bigString;
+    }
+
+
+    //A sandwich is two pieces of bread with something in between. Return the string that is
+    //between the first and last appearance of "bread" in the given string, or return the empty string ""
+    //if there are not two pieces of bread.
+      //getSandwich("breadjambread") → "jam"
+      //getSandwich("xxbreadjambreadyy") → "jam"
+      //getSandwich("xxbreadyy") → ""
+
+    public String getSandwich(String str) {
+        String bread = "bread";
+        int coordinateOfFirstBread = 0;
+        int coordinateOfSecondBread = 0;
+
+        if (str.length() <= bread.length() * 2) {
+            return "";
+        } else {
+            for (int i = 0; i < str.length(); i++) {
+                if (bread.equals(str.substring(i, i + bread.length()))) {
+                    coordinateOfFirstBread = i + bread.length();
+                    //System.out.println("coordinateOfFirstBread = " + coordinateOfFirstBread);
+                    break;
+                }
+            }
+
+            for (int i = str.length() - bread.length(); i > -1; i--) {
+                if (bread.equals(str.substring(i, i + bread.length()))) {
+                    coordinateOfSecondBread = i;
+                    //System.out.println("coordinateOfSecondBread = " + coordinateOfSecondBread);
+                    break;
+                }
+            }
+
+            if (coordinateOfFirstBread != coordinateOfSecondBread) {
+                return str.substring(coordinateOfFirstBread, coordinateOfSecondBread);
+            }
+        }
+
+        return "";
+    }
+
+
+    //Look for patterns like "zip" and "zap" in the string -- length-3, starting with 'z' and ending with 'p'.
+    //Return a string where for all such words, the middle letter is gone, so "zipXzap" yields "zpXzp".
+      //zipZap("zipXzap") → "zpXzp"
+      //zipZap("zopzop") → "zpzp"
+      //zipZap("zzzopzop") → "zzzpzp"
+
+    public String zipZap(String str) {
+        String out = "";
+
+        if (str.length() < 3) {
+            return str;
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+
+            if (str.charAt(i) == 'z' && str.charAt(i + 2) == 'p') {
+                out = out + "zp";
+                i = i + 2;
+            } else {
+                out = out + str.charAt(i);
+            }
+        }
+        return out;
+    }
+
+
+    //Given a string and a non-empty word string, return a string made of each char just before and
+    //just after every appearance of the word in the string.
+    //Ignore cases where there is no char before or after the word,
+    //and a char may be included twice if it is between two words.
+      //wordEnds("abcXY123XYijk", "XY") → "c13i"
+      //wordEnds("XY123XY", "XY") → "13"
+      //wordEnds("XY1XY", "XY") → "11
+
+    public String wordEnds(String str, String word) {
+        String out = "";
+
+        //if the string is not longer than word we return an empty string
+        if (word.length() >= str.length()) {
+            return "";
+        } else {
+            //when the  str starts with the value word we concatenate out and first char after the word
+            if (str.startsWith(word)) {
+                out = out + str.charAt(word.length());
+            }
+            //iterate in the str and if it found a word in the str we concatenate the before and after chars to the out
+            for (int i = 1; i < str.length() - word.length(); i++) {
+                if (word.equals(str.substring(i, i + word.length()))) {
+                    out = out + str.charAt(i - 1) + str.charAt(i + word.length());
+                }
+            }
+            //when the end of the str is the word we concatenate the before char of the end of the word
+            if (str.endsWith(word)) {
+                out = out + str.charAt(str.length() - word.length() - 1);
+            }
+        }
+
+        return out;
+    }
 }
