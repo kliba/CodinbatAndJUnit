@@ -11,7 +11,7 @@ public class String2Test {
 
     String2 testString2 = new String2();
 
-    //******https://codingbat.com/java/String-1******first column
+    //******https://codingbat.com/java/String-2******first column
 
     //doubleChar
     @Test
@@ -138,7 +138,7 @@ public class String2Test {
         assertEquals("", testString2.starOut(""));
     }
 
-    //******https://codingbat.com/java/String-1******second column
+    //******https://codingbat.com/java/String-2******second column
 
     //countHi
     @Test
@@ -272,7 +272,7 @@ public class String2Test {
         assertEquals("++3++3"	, testString2.plusOut("123123", "3"));
     }
 
-    //******https://codingbat.com/java/String-1******third column
+    //******https://codingbat.com/java/String-2******third column
 
     //catDog
     @Test

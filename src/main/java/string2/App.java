@@ -6,7 +6,7 @@ public class App {
 
         String2 myString2 = new String2();
 
-        //******https://codingbat.com/java/String-1******first column
+        //******https://codingbat.com/java/String-2******first column
 
         //doubleChar
         myString2.doubleChar("The");
@@ -113,7 +113,7 @@ public class App {
         myString2.starOut("");
 
 
-        //******https://codingbat.com/java/String-1******second column
+        //******https://codingbat.com/java/String-2******second column
 
         //countHi
         myString2.countHi("abc hi ho");
@@ -226,7 +226,7 @@ public class App {
         myString2.plusOut("aaxxxxbb", "xx");
         myString2.plusOut("123123", "3");
 
-        //******https://codingbat.com/java/String-1******third column
+        //******https://codingbat.com/java/String-2******third column
 
         //catDog
         myString2.catDog("catdog");

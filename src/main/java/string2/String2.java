@@ -5,7 +5,7 @@ import java.util.List;
 
 public class String2 {
 
-    //******https://codingbat.com/java/String-1******first column
+    //******https://codingbat.com/java/String-2******first column
 
     //Given a string, return a string where for every char in the original, there are two chars.
     //doubleChar("The") → "TThhee"
@@ -159,7 +159,7 @@ public class String2 {
     }
 
 
-    //******https://codingbat.com/java/String-1******second column
+    //******https://codingbat.com/java/String-2******second column
 
     //Return the number of times that the string "hi" appears anywhere in the given string.
     //countHi("abc hi ho") → 1
@@ -337,7 +337,7 @@ public class String2 {
     }
 
 
-    //******https://codingbat.com/java/String-1******third column
+    //******https://codingbat.com/java/String-2******third column
 
     //Return true if the string "cat" and "dog" appear the same number of times in the given string.
       //catDog("catdog") → true
