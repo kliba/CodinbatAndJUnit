@@ -1,6 +1,8 @@
 package array2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Array2 {
 
@@ -525,4 +527,276 @@ public class Array2 {
 
 
     //******https://codingbat.com/java/Array-2******third column
+
+    //Return the "centered" average of an array of ints, which we'll say is the mean average of the values,
+    //except ignoring the largest and smallest values in the array. If there are multiple
+    //copies of the smallest value, ignore just one copy, and likewise for the largest value.
+    //Use int division to produce the final average. You may assume that the array is length 3 or more.
+      //centeredAverage([1, 2, 3, 4, 100]) → 3
+      //centeredAverage([1, 1, 5, 5, 10, 8, 7]) → 5
+      //centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
+
+    public int centeredAverage(int[] nums) {
+        int min = nums[0];
+        int max = nums[0];
+        int sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < min) {
+                min = nums[i];
+            }
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+            sum += nums[i];
+        }
+        return (sum - min - max) / (nums.length - 2);
+    }
+
+
+    //Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
+      //has22([1, 2, 2]) → true
+      //has22([1, 2, 1, 2]) → false
+      //has22([2, 1, 2]) → false
+
+    public boolean has22(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    //Given an array of ints, return true if the number of 1's is greater than the number of 4's
+      //more14([1, 4, 1]) → true
+      //more14([1, 4, 1, 4]) → false
+      //more14([1, 1]) → true
+
+    public boolean more14(int[] nums) {
+        int counter1 = 0;
+        int counter4 = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                counter1++;
+            }
+
+            if (nums[i] == 4) {
+                counter4++;
+            }
+        }
+
+        if (counter1 > counter4) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    //Given a number n, create and return a new string array of length n, containing the strings "0", "1" "2" ..
+    //through n-1. N may be 0, in which case just return a length 0 array.
+    //Note: String.valueOf(xxx) will make the String form of most types.
+    //The syntax to make a new string array is: new String[desired_length]  (See also: FizzBuzz Code)
+      //fizzArray2(4) → ["0", "1", "2", "3"]
+      //fizzArray2(10) → ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+      //fizzArray2(2) → ["0", "1"]
+
+    public String[] fizzArray2(int n) {
+        String[] out = new String[n];
+
+        for (int i = 0; i < n; i++) {
+            out[i] = "" + i;
+        }
+        return out;
+    }
+
+
+    //Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+      //either24([1, 2, 2]) → true
+      //either24([4, 4, 1]) → true
+      //either24([4, 4, 1, 2, 2]) → false
+
+    public boolean either24(int[] nums) {
+        boolean double2 = false;
+        boolean double4 = false;
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) {
+                double2 = true;
+            }
+            if (nums[i] == 4 && nums[i + 1] == 4) {
+                double4 = true;
+            }
+        }
+
+        if (double2 && double4) {
+            return false;
+        }else if (double2) {
+            return true;
+        }else if (double4) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
+    //Given an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.
+      //has12([1, 3, 2]) → true
+      //has12([3, 1, 2]) → true
+      //has12([3, 1, 4, 5, 2]) → true
+
+    public boolean has12(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                for (int j = i; j < nums.length; j++) {
+                    if (nums[j] == 2) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+
+    //Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+      //twoTwo([4, 2, 2, 3]) → true
+      //twoTwo([2, 2, 4]) → true
+      //twoTwo([2, 2, 4, 2]) → false
+
+    public boolean twoTwo(int[] nums) {
+        List<Integer> listOfTwos = new ArrayList<>();
+        boolean result = false;
+
+        //collect the indexNr of number 2 and add them to listOfTwo
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 2) {
+                listOfTwos.add(i);
+            }
+        }
+        //if does not contain two aka listOfTwos size is zero returning true
+        if (listOfTwos.size() == 0) {
+            return true;
+        }
+        //checks them if all is next to each others
+        //System.out.println("listOfTwos = " + listOfTwos);
+        for (int i = 0; i < listOfTwos.size() - 1; i++) {
+            if (listOfTwos.get(i + 1) - listOfTwos.get(i) == 1) {
+                result = true;
+            } else {
+                return false;
+            }
+        }
+        return result;
+    }
+
+
+    //Given start and end numbers, return a new array containing the sequence of integers from start up
+    //to but not including end, so start=5 and end=10 yields {5, 6, 7, 8, 9}.
+    //The end number will be greater or equal to the start number.
+    //Note that a length-0 array is valid. (See also: FizzBuzz Code)
+      //fizzArray3(5, 10) → [5, 6, 7, 8, 9]
+      //fizzArray3(11, 18) → [11, 12, 13, 14, 15, 16, 17]
+      //fizzArray3(1, 3) → [1, 2]
+
+    public int[] fizzArray3(int start, int end) {
+        int[] result = new int[end - start];
+        int indexOfFor = 0;
+
+        for (; start < end; start++) {
+            result[indexOfFor] = start;
+            indexOfFor++;
+        }
+        return result;
+    }
+
+    //Given a non-empty array of ints, return a new array containing the elements from the original array
+    //that come before the first 4 in the original array. The original array will contain at least one 4.
+    //Note that it is valid in java to create an array of length 0.
+      //pre4([1, 2, 4, 1]) → [1, 2]
+      //pre4([3, 1, 4]) → [3, 1]
+      //pre4([1, 4, 4]) → [1]
+
+    public int[] pre4(int[] nums) {
+        int indexOfResult = 0;
+        int countForSize = 0;
+
+        //iterate until the first4 then store it in countForSize variable
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 4) {
+                countForSize = i;
+                break;
+            }
+        }
+
+        //initialize the return array
+        int[] result = new int[countForSize];
+
+        //uploading the result array with the relevant numbers
+        for (int i = 0; i < countForSize; i++) {
+            if (nums[i] == 4) {
+                break;
+            } else {
+                result[indexOfResult] = nums[i];
+                indexOfResult++;
+            }
+        }
+        return result;
+    }
+
+    //Return an array that contains the exact same numbers as the given array, but rearranged so that all
+    //the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter.
+    //So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+      //zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
+      //zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
+      //zeroFront([1, 0]) → [0, 1]
+
+    public int[] zeroFront(int[] nums) {
+        int[] result = new int[nums.length];
+        int indexOfResult = 0;
+        int indexBackward = nums.length - 1;
+
+        //if the value of array element is 0 takes it from the began of the result on the other hand from the end
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                result[indexOfResult] = nums[i];
+                indexOfResult++;
+            } else {
+                result[indexBackward] = nums[i];
+                indexBackward--;
+            }
+        }
+        return result;
+    }
+
+
+    //Return an array that contains the exact same numbers as the given array,
+    //but rearranged so that all the even numbers come before all the odd numbers.
+    //Other than that, the numbers can be in any order.
+    //You may modify and return the given array, or make a new array.
+      //evenOdd([1, 0, 1, 0, 0, 1, 1]) → [0, 0, 0, 1, 1, 1, 1]
+      //evenOdd([3, 3, 2]) → [2, 3, 3]
+      //evenOdd([2, 2, 2]) → [2, 2, 2]
+
+    public int[] evenOdd(int[] nums) {
+        int[] result = new int[nums.length];
+        int indexOfResult = 0;
+        int indexBackward = nums.length - 1;
+
+        //if the value of array element is even takes it from the began of the result on the other hand from the end
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
+                result[indexOfResult] = nums[i];
+                indexOfResult++;
+            } else {
+                result[indexBackward] = nums[i];
+                indexBackward--;
+            }
+        }
+        return result;
+    }
 }

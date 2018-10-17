@@ -1,6 +1,5 @@
 package array2test;
 
-import array1.Array1;
 import array2.Array2;
 import org.junit.Test;
 
@@ -760,5 +759,363 @@ public class Array2Test {
     }
 
     //******https://codingbat.com/java/Array-2******third column
+
+    //centeredAverage
+    @Test
+    public void testCenteredAverage() {
+        int[] firstCenteredAverage = {1, 2, 3, 4, 100};
+        int[] secondCenteredAverage = {1, 1, 5, 5, 10, 8, 7};
+        int[] thirdCenteredAverage = {-10, -4, -2, -4, -2, 0};
+        int[] fourthCenteredAverage = {5, 3, 4, 6, 2};
+        int[] fifthCenteredAverage = {5, 3, 4, 0, 100};
+        int[] sixthCenteredAverage = {100, 0, 5, 3, 4};
+        int[] seventhCenteredAverage = {4, 0, 100};
+        int[] eighthCenteredAverage = {0, 2, 3, 4, 100};
+        int[] ninthCenteredAverage = {1, 1, 100};
+        int[] tenthCenteredAverage = {7, 7, 7};
+        int[] eleventhCenteredAverage = {1, 7, 8};
+        int[] twelfthCenteredAverage = {1, 1, 99, 99};
+        int[] thirteenthCenteredAverage = {1000, 0, 1, 99};
+        int[] fourteenthCenteredAverage = {4, 4, 4, 4, 5};
+        int[] fifteenthCenteredAverage = {4, 4, 4, 1, 5};
+        int[] sixteenthCenteredAverage = {6, 4, 8, 12, 3};
+        assertEquals(3, testArray2.centeredAverage(firstCenteredAverage));
+        assertEquals(5, testArray2.centeredAverage(secondCenteredAverage));
+        assertEquals(-3, testArray2.centeredAverage(thirdCenteredAverage));
+        assertEquals(4, testArray2.centeredAverage(fourthCenteredAverage));
+        assertEquals(4, testArray2.centeredAverage(fifthCenteredAverage));
+        assertEquals(4, testArray2.centeredAverage(sixthCenteredAverage));
+        assertEquals(4, testArray2.centeredAverage(seventhCenteredAverage));
+        assertEquals(3, testArray2.centeredAverage(eighthCenteredAverage));
+        assertEquals(1, testArray2.centeredAverage(ninthCenteredAverage));
+        assertEquals(7, testArray2.centeredAverage(tenthCenteredAverage));
+        assertEquals(7, testArray2.centeredAverage(eleventhCenteredAverage));
+        assertEquals(50, testArray2.centeredAverage(twelfthCenteredAverage));
+        assertEquals(50, testArray2.centeredAverage(thirteenthCenteredAverage));
+        assertEquals(4, testArray2.centeredAverage(fourteenthCenteredAverage));
+        assertEquals(4, testArray2.centeredAverage(fifteenthCenteredAverage));
+        assertEquals(6, testArray2.centeredAverage(sixteenthCenteredAverage));
+    }
+
+    //has22
+    @Test
+    public void testHas22() {
+        int[] firstHas22 = {1, 2, 2};
+        int[] secondHas22 = {1, 2, 1, 2};
+        int[] thirdHas22 = {2, 1, 2};
+        int[] fourthHas22 = {2, 2, 1, 2};
+        int[] fifthHas22 = {1, 3, 2};
+        int[] sixthHas22 = {1, 3, 2, 2};
+        int[] seventhHas22 = {2, 3, 2, 2};
+        int[] eighthHas22 = {4, 2, 4, 2, 2, 5};
+        int[] ninthHas22 = {1, 2};
+        int[] tenthHas22 = {2, 2};
+        int[] eleventhHas22 = {2};
+        int[] twelfthHas22 = {};
+        int[] thirteenthHas22 = {3, 3, 2, 2};
+        int[] fourteenthHas22 = {5, 2, 5, 2};
+        assertTrue(testArray2.has22(firstHas22));
+        assertFalse(testArray2.has22(secondHas22));
+        assertFalse(testArray2.has22(thirdHas22));
+        assertTrue(testArray2.has22(fourthHas22));
+        assertFalse(testArray2.has22(fifthHas22));
+        assertTrue(testArray2.has22(sixthHas22));
+        assertTrue(testArray2.has22(seventhHas22));
+        assertTrue(testArray2.has22(eighthHas22));
+        assertFalse(testArray2.has22(ninthHas22));
+        assertTrue(testArray2.has22(tenthHas22));
+        assertFalse(testArray2.has22(eleventhHas22));
+        assertFalse(testArray2.has22(twelfthHas22));
+        assertTrue(testArray2.has22(thirteenthHas22));
+        assertFalse(testArray2.has22(fourteenthHas22));
+    }
+
+    //more14
+    @Test
+    public void testMore14() {
+        int[] firstMore14 = {1, 4, 1};
+        int[] secondMore14 = {1, 4, 1, 4};
+        int[] thirdMore14 = {1, 1};
+        int[] fourthMore14 = {1, 6, 6};
+        int[] fifthMore14 = {1};
+        int[] sixthMore14 = {1, 4};
+        int[] seventhMore14 = {6, 1, 1};
+        int[] eighthMore14 = {1, 6, 4};
+        int[] ninthMore14 = {1, 1, 4, 4, 1};
+        int[] tenthMore14 = {1, 1, 6, 4, 4, 1};
+        int[] eleventhMore14 = {};
+        int[] twelfthMore14 = {4, 1, 4, 6};
+        int[] thirteenthMore14 = {4, 1, 4, 6, 1};
+        int[] fourteenthMore14 = {1, 4, 1, 4, 1, 6};
+        assertTrue(testArray2.more14(firstMore14));
+        assertFalse(testArray2.more14(secondMore14));
+        assertTrue(testArray2.more14(thirdMore14));
+        assertTrue(testArray2.more14(fourthMore14));
+        assertTrue(testArray2.more14(fifthMore14));
+        assertFalse(testArray2.more14(sixthMore14));
+        assertTrue(testArray2.more14(seventhMore14));
+        assertFalse(testArray2.more14(eighthMore14));
+        assertTrue(testArray2.more14(ninthMore14));
+        assertTrue(testArray2.more14(tenthMore14));
+        assertFalse(testArray2.more14(eleventhMore14));
+        assertFalse(testArray2.more14(twelfthMore14));
+        assertFalse(testArray2.more14(thirteenthMore14));
+        assertTrue(testArray2.more14(fourteenthMore14));
+    }
+
+    //fizzArray2
+    @Test
+    public void testFizzArray2() {
+        String[] firstFizzArray2Solution = {"0", "1", "2", "3"};
+        String[] secondFizzArray2Solution = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        String[] thirdFizzArray2Solution = {"0", "1"};
+        String[] fourthFizzArray2Solution = {"0"};
+        String[] fifthFizzArray2Solution = {};
+        String[] sixthFizzArray2Solution = {"0", "1", "2", "3", "4", "5", "6"};
+        String[] seventhFizzArray2Solution = {"0", "1", "2", "3", "4", "5", "6", "7", "8"};
+        String[] eighthFizzArray2Solution = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        assertEquals(Arrays.toString(firstFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(4)));
+        assertEquals(Arrays.toString(secondFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(10)));
+        assertEquals(Arrays.toString(thirdFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(2)));
+        assertEquals(Arrays.toString(fourthFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(1)));
+        assertEquals(Arrays.toString(fifthFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(0)));
+        assertEquals(Arrays.toString(sixthFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(7)));
+        assertEquals(Arrays.toString(seventhFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(9)));
+        assertEquals(Arrays.toString(eighthFizzArray2Solution), Arrays.toString(testArray2.fizzArray2(11)));
+    }
+
+    //either24
+    @Test
+    public void testEither24() {
+        int[] firstEither24 = {1, 2, 2};
+        int[] secondEither24 = {4, 4, 1};
+        int[] thirdEither24 = {4, 4, 1, 2, 2};
+        int[] fourthEither24 = {1, 2, 3, 4};
+        int[] fifthEither24 = {3, 5, 9};
+        int[] sixthEither24 = {1, 2, 3, 4, 4};
+        int[] seventhEither24 = {2, 2, 3, 4};
+        int[] eighthEither24 = {1, 2, 3, 2, 2, 4};
+        int[] ninthEither24 = {1, 2, 3, 2, 2, 4, 4};
+        int[] tenthEither24 = {1, 2};
+        int[] eleventhEither24 = {2, 2};
+        int[] twelfthEither24 = {4, 4};
+        int[] thirteenthEither24 = {2};
+        int[] fourteenthEither24 = {};
+        assertTrue(testArray2.either24(firstEither24));
+        assertTrue(testArray2.either24(secondEither24));
+        assertFalse(testArray2.either24(thirdEither24));
+        assertFalse(testArray2.either24(fourthEither24));
+        assertFalse(testArray2.either24(fifthEither24));
+        assertTrue(testArray2.either24(sixthEither24));
+        assertTrue(testArray2.either24(seventhEither24));
+        assertTrue(testArray2.either24(eighthEither24));
+        assertFalse(testArray2.either24(ninthEither24));
+        assertFalse(testArray2.either24(tenthEither24));
+        assertTrue(testArray2.either24(eleventhEither24));
+        assertTrue(testArray2.either24(twelfthEither24));
+        assertFalse(testArray2.either24(thirteenthEither24));
+        assertFalse(testArray2.either24(fourteenthEither24));
+    }
+
+    //has12
+    @Test
+    public void testHas12() {
+        int[] firstHas12 = {1, 3, 2};
+        int[] secondHas12 = {3, 1, 2};
+        int[] thirdHas12 = {3, 1, 4, 5, 2};
+        int[] fourthHas12 = {3, 1, 4, 5, 6};
+        int[] fifthHas12 = {3, 1, 4, 1, 6, 2};
+        int[] sixthHas12 = {2, 1, 4, 1, 6, 2};
+        int[] seventhHas12 = {2, 1, 4, 1, 6};
+        int[] eighthHas12 = {1};
+        int[] ninthHas12 = {2, 1, 3};
+        int[] tenthHas12 = {2, 1, 3, 2};
+        int[] eleventhHas12 = {2};
+        int[] twelfthHas12 = {3, 2};
+        int[] thirteenthHas12 = {3, 1, 3, 2};
+        int[] fourteenthHas12 = {3, 5, 9};
+        int[] fifteenthHas12 = {3, 5, 1};
+        int[] sixteenthHas12 = {3, 2, 1};
+        int[] seventeenthHas12 = {1, 2};
+        assertTrue(testArray2.has12(firstHas12));
+        assertTrue(testArray2.has12(secondHas12));
+        assertTrue(testArray2.has12(thirdHas12));
+        assertFalse(testArray2.has12(fourthHas12));
+        assertTrue(testArray2.has12(fifthHas12));
+        assertTrue(testArray2.has12(sixthHas12));
+        assertFalse(testArray2.has12(seventhHas12));
+        assertFalse(testArray2.has12(eighthHas12));
+        assertFalse(testArray2.has12(ninthHas12));
+        assertTrue(testArray2.has12(tenthHas12));
+        assertFalse(testArray2.has12(eleventhHas12));
+        assertFalse(testArray2.has12(twelfthHas12));
+        assertTrue(testArray2.has12(thirteenthHas12));
+        assertFalse(testArray2.has12(fourteenthHas12));
+        assertFalse(testArray2.has12(fifteenthHas12));
+        assertFalse(testArray2.has12(sixteenthHas12));
+        assertTrue(testArray2.has12(seventeenthHas12));
+    }
+
+    //twoTwo
+    @Test
+    public void testTwoTwo() {
+        int[] firstTwoTwo = {4, 2, 2, 3};
+        int[] secondTwoTwo = {2, 2, 4};
+        int[] thirdTwoTwo = {2, 2, 4, 2};
+        int[] fourthTwoTwo = {1, 3, 4};
+        int[] fifthTwoTwo = {1, 2, 2, 3, 4};
+        int[] sixthTwoTwo = {1, 2, 3, 4};
+        int[] seventhTwoTwo = {2, 2};
+        int[] eighthTwoTwo = {2, 2, 7};
+        int[] ninthTwoTwo = {2, 2, 7, 2, 1};
+        int[] tenthTwoTwo = {4, 2, 2, 2};
+        int[] eleventhTwoTwo = {2, 2, 2};
+        int[] twelfthTwoTwo = {1, 2};
+        int[] thirteenthTwoTwo = {2};
+        int[] fourteenthTwoTwo = {1};
+        int[] fifteenthTwoTwo = {};
+        int[] sixteenthTwoTwo = {5, 2, 2, 3};
+        int[] seventeenthTwoTwo = {2, 2, 5, 2};
+        assertTrue(testArray2.twoTwo(firstTwoTwo));
+        assertTrue(testArray2.twoTwo(secondTwoTwo));
+        assertFalse(testArray2.twoTwo(thirdTwoTwo));
+        assertTrue(testArray2.twoTwo(fourthTwoTwo));
+        assertTrue(testArray2.twoTwo(fifthTwoTwo));
+        assertFalse(testArray2.twoTwo(sixthTwoTwo));
+        assertTrue(testArray2.twoTwo(seventhTwoTwo));
+        assertTrue(testArray2.twoTwo(eighthTwoTwo));
+        assertFalse(testArray2.twoTwo(ninthTwoTwo));
+        assertTrue(testArray2.twoTwo(tenthTwoTwo));
+        assertTrue(testArray2.twoTwo(eleventhTwoTwo));
+        assertFalse(testArray2.twoTwo(twelfthTwoTwo));
+        assertFalse(testArray2.twoTwo(thirteenthTwoTwo));
+        assertTrue(testArray2.twoTwo(fourteenthTwoTwo));
+        assertTrue(testArray2.twoTwo(fifteenthTwoTwo));
+        assertTrue(testArray2.twoTwo(sixteenthTwoTwo));
+        assertFalse(testArray2.twoTwo(seventeenthTwoTwo));
+    }
+
+    //fizzArray3
+    @Test
+    public void testFizzArray3() {
+        int[] firstFizzArray3Solution = {5, 6, 7, 8, 9};
+        int[] secondFizzArray3Solution = {11, 12, 13, 14, 15, 16, 17};
+        int[] thirdFizzArray3Solution = {1, 2};
+        int[] fourthFizzArray3Solution = {1};
+        int[] fifthFizzArray3Solution = {};
+        int[] sixthFizzArray3Solution = {1000, 1001, 1002, 1003, 1004};
+        assertEquals(Arrays.toString(firstFizzArray3Solution), Arrays.toString(testArray2.fizzArray3(5, 10)));
+        assertEquals(Arrays.toString(secondFizzArray3Solution), Arrays.toString(testArray2.fizzArray3(11, 18)));
+        assertEquals(Arrays.toString(thirdFizzArray3Solution), Arrays.toString(testArray2.fizzArray3(1, 3)));
+        assertEquals(Arrays.toString(fourthFizzArray3Solution), Arrays.toString(testArray2.fizzArray3(1, 2)));
+        assertEquals(Arrays.toString(fifthFizzArray3Solution), Arrays.toString(testArray2.fizzArray3(1, 1)));
+        assertEquals(Arrays.toString(sixthFizzArray3Solution), Arrays.toString(testArray2.fizzArray3(1000, 1005)));
+    }
+
+    //pre4
+    @Test
+    public void testPre4() {
+        int[] firstPre4 = {1, 2, 4, 1};
+        int[] firstPre4Solution = {1, 2};
+        int[] secondPre4 = {3, 1, 4};
+        int[] secondPre4Solution = {3, 1};
+        int[] thirdPre4 = {1, 4, 4};
+        int[] thirdPre4Solution = {1};
+        int[] fourthPre4 = {1, 4, 4, 2};
+        int[] fourthPre4Solution = {1};
+        int[] fifthPre4 = {1, 3, 4, 2, 4};
+        int[] fifthPre4Solution = {1, 3};
+        int[] sixthPre4 = {4, 4};
+        int[] sixthPre4Solution = {};
+        int[] seventhPre4 = {3, 3, 4};
+        int[] seventhPre4Solution = {3, 3};
+        int[] eighthPre4 = {1, 2, 1, 4};
+        int[] eighthPre4Solution = {1, 2, 1};
+        int[] ninthPre4 = {2, 1, 4, 2};
+        int[] ninthPre4Solution = {2, 1};
+        int[] tenthPre4 = {2, 1, 2, 1, 4, 2};
+        int[] tenthPre4Solution = {2, 1, 2, 1};
+        assertEquals(Arrays.toString(firstPre4Solution), Arrays.toString(testArray2.pre4(firstPre4)));
+        assertEquals(Arrays.toString(secondPre4Solution), Arrays.toString(testArray2.pre4(secondPre4)));
+        assertEquals(Arrays.toString(thirdPre4Solution), Arrays.toString(testArray2.pre4(thirdPre4)));
+        assertEquals(Arrays.toString(fourthPre4Solution), Arrays.toString(testArray2.pre4(fourthPre4)));
+        assertEquals(Arrays.toString(fifthPre4Solution), Arrays.toString(testArray2.pre4(fifthPre4)));
+        assertEquals(Arrays.toString(sixthPre4Solution), Arrays.toString(testArray2.pre4(sixthPre4)));
+        assertEquals(Arrays.toString(seventhPre4Solution), Arrays.toString(testArray2.pre4(seventhPre4)));
+        assertEquals(Arrays.toString(eighthPre4Solution), Arrays.toString(testArray2.pre4(eighthPre4)));
+        assertEquals(Arrays.toString(ninthPre4Solution), Arrays.toString(testArray2.pre4(ninthPre4)));
+        assertEquals(Arrays.toString(tenthPre4Solution), Arrays.toString(testArray2.pre4(tenthPre4)));
+    }
+
+    //zeroFront
+    @Test
+    public void testZeroFront() {
+        int[] firstZeroFront = {1, 0, 0, 1};
+        int[] firstZeroFrontSolution = {0, 0, 1, 1};
+        int[] secondZeroFront = {0, 1, 1, 0, 1};
+        int[] secondZeroFrontSolution = {0, 0, 1, 1, 1};
+        int[] thirdZeroFront = {1, 0};
+        int[] thirdZeroFrontSolution = {0, 1};
+        int[] fourthZeroFront = {0, 1};
+        int[] fourthZeroFrontSolution = {0, 1};
+        int[] fifthZeroFront = {1, 1, 1, 0};
+        int[] fifthZeroFrontSolution = {0, 1, 1, 1};
+        int[] sixthZeroFront = {2, 2, 2, 2};
+        int[] sixthZeroFrontSolution = {2, 2, 2, 2};
+        int[] seventhZeroFront = {0, 0, 1, 0};
+        int[] seventhZeroFrontSolution = {0, 0, 0, 1};
+        int[] eighthZeroFront = {-1, 0, 0, -1, 0};
+        int[] eighthZeroFrontSolution = {0, 0, 0, -1, -1};
+        int[] ninthZeroFront = {0, -3, 0, -3};
+        int[] ninthZeroFrontSolution = {0, 0, -3, -3};
+        int[] tenthZeroFront = {};
+        int[] tenthZeroFrontSolution = {};
+        int[] eleventhZeroFront = {9, 9, 0, 9, 0, 9};
+        int[] eleventhZeroFrontSolution = {0, 0, 9, 9, 9, 9};
+        assertEquals(Arrays.toString(firstZeroFrontSolution), Arrays.toString(testArray2.zeroFront(firstZeroFront)));
+        assertEquals(Arrays.toString(secondZeroFrontSolution), Arrays.toString(testArray2.zeroFront(secondZeroFront)));
+        assertEquals(Arrays.toString(thirdZeroFrontSolution), Arrays.toString(testArray2.zeroFront(thirdZeroFront)));
+        assertEquals(Arrays.toString(fourthZeroFrontSolution), Arrays.toString(testArray2.zeroFront(fourthZeroFront)));
+        assertEquals(Arrays.toString(fifthZeroFrontSolution), Arrays.toString(testArray2.zeroFront(fifthZeroFront)));
+        assertEquals(Arrays.toString(sixthZeroFrontSolution), Arrays.toString(testArray2.zeroFront(sixthZeroFront)));
+        assertEquals(Arrays.toString(seventhZeroFrontSolution), Arrays.toString(testArray2.zeroFront(seventhZeroFront)));
+        assertEquals(Arrays.toString(eighthZeroFrontSolution), Arrays.toString(testArray2.zeroFront(eighthZeroFront)));
+        assertEquals(Arrays.toString(ninthZeroFrontSolution), Arrays.toString(testArray2.zeroFront(ninthZeroFront)));
+        assertEquals(Arrays.toString(tenthZeroFrontSolution), Arrays.toString(testArray2.zeroFront(tenthZeroFront)));
+        assertEquals(Arrays.toString(eleventhZeroFrontSolution), Arrays.toString(testArray2.zeroFront(eleventhZeroFront)));
+    }
+
+    //evenOdd
+    @Test
+    public void testEvenOdd() {
+        int[] firstEvenOdd = {1, 0, 1, 0, 0, 1, 1};
+        int[] firstEvenOddSolution = {0, 0, 0, 1, 1, 1, 1};
+        int[] secondEvenOdd = {3, 3, 2};
+        int[] secondEvenOddSolution = {2, 3, 3};
+        int[] thirdEvenOdd = {2, 2, 2};
+        int[] thirdEvenOddSolution = {2, 2, 2};
+        int[] fourthEvenOdd = {3, 2, 2};
+        int[] fourthEvenOddSolution = {2, 2, 3};
+        int[] fifthEvenOdd = {1, 1, 0, 1, 0};
+        int[] fifthEvenOddSolution = {0, 0, 1, 1, 1};
+        int[] sixthEvenOdd = {1};
+        int[] sixthEvenOddSolution = {1};
+        int[] seventhEvenOdd = {1, 2};
+        int[] seventhEvenOddSolution = {2, 1};
+        int[] eighthEvenOdd = {2, 1};
+        int[] eighthEvenOddSolution = {2, 1};
+        int[] ninthEvenOdd = {};
+        int[] ninthEvenOddSolution = {};
+        assertEquals(Arrays.toString(firstEvenOddSolution), Arrays.toString(testArray2.evenOdd(firstEvenOdd)));
+        assertEquals(Arrays.toString(secondEvenOddSolution), Arrays.toString(testArray2.evenOdd(secondEvenOdd)));
+        assertEquals(Arrays.toString(thirdEvenOddSolution), Arrays.toString(testArray2.evenOdd(thirdEvenOdd)));
+        assertEquals(Arrays.toString(fourthEvenOddSolution), Arrays.toString(testArray2.evenOdd(fourthEvenOdd)));
+        assertEquals(Arrays.toString(fifthEvenOddSolution), Arrays.toString(testArray2.evenOdd(fifthEvenOdd)));
+        assertEquals(Arrays.toString(sixthEvenOddSolution), Arrays.toString(testArray2.evenOdd(sixthEvenOdd)));
+        assertEquals(Arrays.toString(seventhEvenOddSolution), Arrays.toString(testArray2.evenOdd(seventhEvenOdd)));
+        assertEquals(Arrays.toString(eighthEvenOddSolution), Arrays.toString(testArray2.evenOdd(eighthEvenOdd)));
+        assertEquals(Arrays.toString(ninthEvenOddSolution), Arrays.toString(testArray2.evenOdd(ninthEvenOdd)));
+
+    }
 
 }

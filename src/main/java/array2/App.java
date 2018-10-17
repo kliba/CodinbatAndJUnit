@@ -609,7 +609,292 @@ public class App {
         myArray2.zeroMax(tenthZeroMax);
         myArray2.zeroMax(eleventhZeroMax);
         myArray2.zeroMax(twelfthZeroMax);
-    }
 
-    //******https://codingbat.com/java/Array-2******third column
+        //******https://codingbat.com/java/Array-2******third column
+
+        //centeredAverage
+        int[] firstCenteredAverage = {1, 2, 3, 4, 100};
+        int[] secondCenteredAverage = {1, 1, 5, 5, 10, 8, 7};
+        int[] thirdCenteredAverage = {-10, -4, -2, -4, -2, 0};
+        int[] fourthCenteredAverage = {5, 3, 4, 6, 2};
+        int[] fifthCenteredAverage = {5, 3, 4, 0, 100};
+        int[] sixthCenteredAverage = {100, 0, 5, 3, 4};
+        int[] seventhCenteredAverage = {4, 0, 100};
+        int[] eighthCenteredAverage = {0, 2, 3, 4, 100};
+        int[] ninthCenteredAverage = {1, 1, 100};
+        int[] tenthCenteredAverage = {7, 7, 7};
+        int[] eleventhCenteredAverage = {1, 7, 8};
+        int[] twelfthCenteredAverage = {1, 1, 99, 99};
+        int[] thirteenthCenteredAverage = {1000, 0, 1, 99};
+        int[] fourteenthCenteredAverage = {4, 4, 4, 4, 5};
+        int[] fifteenthCenteredAverage = {4, 4, 4, 1, 5};
+        int[] sixteenthCenteredAverage = {6, 4, 8, 12, 3};
+        myArray2.centeredAverage(firstCenteredAverage);
+        myArray2.centeredAverage(secondCenteredAverage);
+        myArray2.centeredAverage(thirdCenteredAverage);
+        myArray2.centeredAverage(thirdCenteredAverage);
+        myArray2.centeredAverage(fourthCenteredAverage);
+        myArray2.centeredAverage(fifthCenteredAverage);
+        myArray2.centeredAverage(sixthCenteredAverage);
+        myArray2.centeredAverage(seventhCenteredAverage);
+        myArray2.centeredAverage(eighthCenteredAverage);
+        myArray2.centeredAverage(ninthCenteredAverage);
+        myArray2.centeredAverage(tenthCenteredAverage);
+        myArray2.centeredAverage(eleventhCenteredAverage);
+        myArray2.centeredAverage(twelfthCenteredAverage);
+        myArray2.centeredAverage(thirteenthCenteredAverage);
+        myArray2.centeredAverage(fourteenthCenteredAverage);
+        myArray2.centeredAverage(fifteenthCenteredAverage);
+        myArray2.centeredAverage(sixteenthCenteredAverage);
+
+        //has22
+        int[] firstHas22 = {1, 2, 2};
+        int[] secondHas22 = {1, 2, 1, 2};
+        int[] thirdHas22 = {2, 1, 2};
+        int[] fourthHas22 = {2, 2, 1, 2};
+        int[] fifthHas22 = {1, 3, 2};
+        int[] sixthHas22 = {1, 3, 2, 2};
+        int[] seventhHas22 = {2, 3, 2, 2};
+        int[] eighthHas22 = {4, 2, 4, 2, 2, 5};
+        int[] ninthHas22 = {1, 2};
+        int[] tenthHas22 = {2, 2};
+        int[] eleventhHas22 = {2};
+        int[] twelfthHas22 = {};
+        int[] thirteenthHas22 = {3, 3, 2, 2};
+        int[] fourteenthHas22 = {5, 2, 5, 2};
+        myArray2.has22(firstHas22);
+        myArray2.has22(secondHas22);
+        myArray2.has22(thirdHas22);
+        myArray2.has22(fourthHas22);
+        myArray2.has22(fifthHas22);
+        myArray2.has22(sixthHas22);
+        myArray2.has22(seventhHas22);
+        myArray2.has22(eighthHas22);
+        myArray2.has22(ninthHas22);
+        myArray2.has22(tenthHas22);
+        myArray2.has22(eleventhHas22);
+        myArray2.has22(twelfthHas22);
+        myArray2.has22(thirteenthHas22);
+        myArray2.has22(fourteenthHas22);
+
+        //more14
+        int[] firstMore14 = {1, 4, 1};
+        int[] secondMore14 = {1, 4, 1, 4};
+        int[] thirdMore14 = {1, 1};
+        int[] fourthMore14 = {1, 6, 6};
+        int[] fifthMore14 = {1};
+        int[] sixthMore14 = {1, 4};
+        int[] seventhMore14 = {6, 1, 1};
+        int[] eighthMore14 = {1, 6, 4};
+        int[] ninthMore14 = {1, 1, 4, 4, 1};
+        int[] tenthMore14 = {1, 1, 6, 4, 4, 1};
+        int[] eleventhMore14 = {};
+        int[] twelfthMore14 = {4, 1, 4, 6};
+        int[] thirteenthMore14 = {4, 1, 4, 6, 1};
+        int[] fourteenthMore14 = {1, 4, 1, 4, 1, 6};
+        myArray2.more14(firstMore14);
+        myArray2.more14(secondMore14);
+        myArray2.more14(thirdMore14);
+        myArray2.more14(fourthMore14);
+        myArray2.more14(fifthMore14);
+        myArray2.more14(sixthMore14);
+        myArray2.more14(seventhMore14);
+        myArray2.more14(eighthMore14);
+        myArray2.more14(ninthMore14);
+        myArray2.more14(tenthMore14);
+        myArray2.more14(eleventhMore14);
+        myArray2.more14(twelfthMore14);
+        myArray2.more14(thirteenthMore14);
+        myArray2.more14(fourteenthMore14);
+
+
+        //fizzArray2
+        myArray2.fizzArray2(4);
+        myArray2.fizzArray2(10);
+        myArray2.fizzArray2(2);
+        myArray2.fizzArray2(1);
+        myArray2.fizzArray2(0);
+        myArray2.fizzArray2(7);
+        myArray2.fizzArray2(9);
+        myArray2.fizzArray2(11);
+
+
+        //either24
+        int[] firstEither24 = {1, 2, 2};
+        int[] secondEither24 = {4, 4, 1};
+        int[] thirdEither24 = {4, 4, 1, 2, 2};
+        int[] fourthEither24 = {1, 2, 3, 4};
+        int[] fifthEither24 = {3, 5, 9};
+        int[] sixthEither24 = {1, 2, 3, 4, 4};
+        int[] seventhEither24 = {2, 2, 3, 4};
+        int[] eighthEither24 = {1, 2, 3, 2, 2, 4};
+        int[] ninthEither24 = {1, 2, 3, 2, 2, 4, 4};
+        int[] tenthEither24 = {1, 2};
+        int[] eleventhEither24 = {2, 2};
+        int[] twelfthEither24 = {4, 4};
+        int[] thirteenthEither24 = {2};
+        int[] fourteenthEither24 = {};
+        myArray2.either24(firstEither24);
+        myArray2.either24(secondEither24);
+        myArray2.either24(thirdEither24);
+        myArray2.either24(fourthEither24);
+        myArray2.either24(fifthEither24);
+        myArray2.either24(sixthEither24);
+        myArray2.either24(seventhEither24);
+        myArray2.either24(eighthEither24);
+        myArray2.either24(ninthEither24);
+        myArray2.either24(tenthEither24);
+        myArray2.either24(eleventhEither24);
+        myArray2.either24(twelfthEither24);
+        myArray2.either24(thirteenthEither24);
+        myArray2.either24(fourteenthEither24);
+
+
+        //has12
+        int[] firstHas12 = {1, 3, 2};
+        int[] secondHas12 = {3, 1, 2};
+        int[] thirdHas12 = {3, 1, 4, 5, 2};
+        int[] fourthHas12 = {3, 1, 4, 5, 6};
+        int[] fifthHas12 = {3, 1, 4, 1, 6, 2};
+        int[] sixthHas12 = {2, 1, 4, 1, 6, 2};
+        int[] seventhHas12 = {2, 1, 4, 1, 6};
+        int[] eighthHas12 = {1};
+        int[] ninthHas12 = {2, 1, 3};
+        int[] tenthHas12 = {2, 1, 3, 2};
+        int[] eleventhHas12 = {2};
+        int[] twelfthHas12 = {3, 2};
+        int[] thirteenthHas12 = {3, 1, 3, 2};
+        int[] fourteenthHas12 = {3, 5, 9};
+        int[] fifteenthHas12 = {3, 5, 1};
+        int[] sixteenthHas12 = {3, 2, 1};
+        int[] seventeenthHas12 = {1, 2};
+        myArray2.has12(firstHas12);
+        myArray2.has12(secondHas12);
+        myArray2.has12(thirdHas12);
+        myArray2.has12(fourthHas12);
+        myArray2.has12(fifthHas12);
+        myArray2.has12(sixthHas12);
+        myArray2.has12(seventhHas12);
+        myArray2.has12(eighthHas12);
+        myArray2.has12(ninthHas12);
+        myArray2.has12(tenthHas12);
+        myArray2.has12(eleventhHas12);
+        myArray2.has12(twelfthHas12);
+        myArray2.has12(thirteenthHas12);
+        myArray2.has12(fourteenthHas12);
+        myArray2.has12(fifteenthHas12);
+        myArray2.has12(sixteenthHas12);
+        myArray2.has12(seventeenthHas12);
+
+        //twoTwo
+        int[] firstTwoTwo = {4, 2, 2, 3};
+        int[] secondTwoTwo = {2, 2, 4};
+        int[] thirdTwoTwo = {2, 2, 4, 2};
+        int[] fourthTwoTwo = {1, 3, 4};
+        int[] fifthTwoTwo = {1, 2, 2, 3, 4};
+        int[] sixthTwoTwo = {1, 2, 3, 4};
+        int[] seventhTwoTwo = {2, 2};
+        int[] eighthTwoTwo = {2, 2, 7};
+        int[] ninthTwoTwo = {2, 2, 7, 2, 1};
+        int[] tenthTwoTwo = {4, 2, 2, 2};
+        int[] eleventhTwoTwo = {2, 2, 2};
+        int[] twelfthTwoTwo = {1, 2};
+        int[] thirteenthTwoTwo = {2};
+        int[] fourteenthTwoTwo = {1};
+        int[] fifteenthTwoTwo = {};
+        int[] sixteenthTwoTwo = {5, 2, 2, 3};
+        int[] seventeenthTwoTwo = {2, 2, 5, 2};
+        myArray2.twoTwo(firstTwoTwo);
+        myArray2.twoTwo(secondTwoTwo);
+        myArray2.twoTwo(thirdTwoTwo);
+        myArray2.twoTwo(fourthTwoTwo);
+        myArray2.twoTwo(fifthTwoTwo);
+        myArray2.twoTwo(sixthTwoTwo);
+        myArray2.twoTwo(seventhTwoTwo);
+        myArray2.twoTwo(eighthTwoTwo);
+        myArray2.twoTwo(ninthTwoTwo);
+        myArray2.twoTwo(tenthTwoTwo);
+        myArray2.twoTwo(eleventhTwoTwo);
+        myArray2.twoTwo(twelfthTwoTwo);
+        myArray2.twoTwo(thirteenthTwoTwo);
+        myArray2.twoTwo(fourteenthTwoTwo);
+        myArray2.twoTwo(fifteenthTwoTwo);
+        myArray2.twoTwo(sixteenthTwoTwo);
+        myArray2.twoTwo(seventeenthTwoTwo);
+
+        //fizzArray3
+        myArray2.fizzArray3(5, 10);
+        myArray2.fizzArray3(11, 18);
+        myArray2.fizzArray3(1, 3);
+        myArray2.fizzArray3(1, 2);
+        myArray2.fizzArray3(1, 1);
+        myArray2.fizzArray3(1000, 1005);
+
+        //pre4
+        int[] firstPre4 = {1, 2, 4, 1};
+        int[] secondPre4 = {3, 1, 4};
+        int[] thirdPre4 = {1, 4, 4};
+        int[] fourthPre4 = {1, 4, 4, 2};
+        int[] fifthPre4 = {1, 3, 4, 2, 4};
+        int[] sixthPre4 = {4, 4};
+        int[] seventhPre4 = {3, 3, 4};
+        int[] eighthPre4 = {1, 2, 1, 4};
+        int[] ninthPre4 = {2, 1, 4, 2};
+        int[] tenthPre4 = {2, 1, 2, 1, 4, 2};
+        myArray2.pre4(firstPre4);
+        myArray2.pre4(secondPre4);
+        myArray2.pre4(thirdPre4);
+        myArray2.pre4(fourthPre4);
+        myArray2.pre4(fifthPre4);
+        myArray2.pre4(sixthPre4);
+        myArray2.pre4(seventhPre4);
+        myArray2.pre4(eighthPre4);
+        myArray2.pre4(ninthPre4);
+        myArray2.pre4(tenthPre4);
+
+        //zeroFront
+        int[] firstZeroFront = {1, 0, 0, 1};
+        int[] secondZeroFront = {0, 1, 1, 0, 1};
+        int[] thirdZeroFront = {1, 0};
+        int[] fourthZeroFront = {0, 1};
+        int[] fifthZeroFront = {1, 1, 1, 0};
+        int[] sixthZeroFront = {2, 2, 2, 2};
+        int[] seventhZeroFront = {0, 0, 1, 0};
+        int[] eighthZeroFront = {-1, 0, 0, -1, 0};
+        int[] ninthZeroFront = {0, -3, 0, -3};
+        int[] tenthZeroFront = {};
+        int[] eleventhZeroFront = {9, 9, 0, 9, 0, 9};
+        myArray2.zeroFront(firstZeroFront);
+        myArray2.zeroFront(secondZeroFront);
+        myArray2.zeroFront(thirdZeroFront);
+        myArray2.zeroFront(fourthZeroFront);
+        myArray2.zeroFront(fifthZeroFront);
+        myArray2.zeroFront(sixthZeroFront);
+        myArray2.zeroFront(seventhZeroFront);
+        myArray2.zeroFront(eighthZeroFront);
+        myArray2.zeroFront(ninthZeroFront);
+        myArray2.zeroFront(tenthZeroFront);
+        myArray2.zeroFront(eleventhZeroFront);
+
+        //evenOdd
+        int[] firstEvenOdd = {1, 0, 1, 0, 0, 1, 1};
+        int[] secondEvenOdd = {3, 3, 2};
+        int[] thirdEvenOdd = {2, 2, 2};
+        int[] fourthEvenOdd = {3, 2, 2};
+        int[] fifthEvenOdd = {1, 1, 0, 1, 0};
+        int[] sixthEvenOdd = {1};
+        int[] seventhEvenOdd = {1, 2};
+        int[] eighthEvenOdd = {2, 1};
+        int[] ninthEvenOdd = {};
+        myArray2.evenOdd(firstEvenOdd);
+        myArray2.evenOdd(secondEvenOdd);
+        myArray2.evenOdd(thirdEvenOdd);
+        myArray2.evenOdd(fourthEvenOdd);
+        myArray2.evenOdd(fifthEvenOdd);
+        myArray2.evenOdd(sixthEvenOdd);
+        myArray2.evenOdd(seventhEvenOdd);
+        myArray2.evenOdd(eighthEvenOdd);
+        myArray2.evenOdd(ninthEvenOdd);
+
+    }
 }
