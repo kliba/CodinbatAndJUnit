@@ -199,6 +199,8 @@ public class AP1Test {
         assertEquals(1, testAP1.userCompare("bzb", 1, "bob", 2));
     }
 
+    //******https://codingbat.com/java/AP-1******second column
+
     //scores100
     @Test
     public void testScores100() {
@@ -378,6 +380,8 @@ public class AP1Test {
         assertEquals(Arrays.toString(ninthMergeTwoSolution), Arrays.toString(testAP1.mergeTwo(ninthMergeTwoA, ninthMergeTwoB, 3)));
     }
 
+    //******https://codingbat.com/java/AP-1******third column
+
     //scoresClump
     @Test
     public void testScoresClump() {
@@ -482,6 +486,196 @@ public class AP1Test {
         assertEquals(2, testAP1.matchUp(eleventhMatchUpA, eleventhMatchUpB));
         assertEquals(3, testAP1.matchUp(twelfthMatchUpA, twelfthMatchUpB));
         assertEquals(1, testAP1.matchUp(thirteenthMatchUpA, thirteenMatchUpB));
+    }
+
+    //scoresSpecial
+    @Test
+    public void testHelpScoresSpecial() {
+        int[] firstScoresSpecialA = {12, 10, 30};
+        int[] secondScoresSpecialA = {20, 10, 4};
+        int[] thirdScoresSpecialA = {12, 11, 4};
+        int[] fourthScoresSpecialA = {1, 20, 2, 50};
+        int[] fifthScoresSpecialA = {3, 4, 5};
+        int[] sixthScoresSpecialA = {10, 4, 20, 30};
+        int[] seventhScoresSpecialA = {10, 4, 20, 30};
+        int[] eighthScoresSpecialA = {10, 4, 20, 30};
+        int[] ninthScoresSpecialA = {10, 4, 20, 30};
+        int[] tenthScoresSpecialA = {};
+        int[] eleventhScoresSpecialA = {};
+        int[] twelfthScoresSpecialA = {14, 10,4};
+
+        int[] firstScoresSpecialB = {2, 20, 30};
+        int[] secondScoresSpecialB = {2, 20, 10};
+        int[] thirdScoresSpecialB = {2, 20, 31};
+        int[] fourthScoresSpecialB = {3, 4, 5};
+        int[] fifthScoresSpecialB = {1, 50, 2, 20};
+        int[] sixthScoresSpecialB = {20};
+        int[] seventhScoresSpecialB = {20};
+        int[] eighthScoresSpecialB = {3, 20, 99};
+        int[] ninthScoresSpecialB = {30, 20, 99};
+        int[] tenthScoresSpecialB = {2};
+        int[] eleventhScoresSpecialB = {20};
+        int[] twelfthScoresSpecialB = {4, 20, 30};
+
+        assertEquals(30, testAP1.helpScoresSpecial(firstScoresSpecialA));
+        assertEquals(30, testAP1.helpScoresSpecial(firstScoresSpecialB));
+        assertEquals(20, testAP1.helpScoresSpecial(secondScoresSpecialA));
+        assertEquals(20, testAP1.helpScoresSpecial(secondScoresSpecialB));
+        assertEquals(0, testAP1.helpScoresSpecial(thirdScoresSpecialA));
+        assertEquals(20, testAP1.helpScoresSpecial(thirdScoresSpecialB));
+        assertEquals(50, testAP1.helpScoresSpecial(fourthScoresSpecialA));
+        assertEquals(0, testAP1.helpScoresSpecial(fourthScoresSpecialB));
+        assertEquals(0, testAP1.helpScoresSpecial(fifthScoresSpecialA));
+        assertEquals(50, testAP1.helpScoresSpecial(fifthScoresSpecialB));
+        assertEquals(30, testAP1.helpScoresSpecial(sixthScoresSpecialA));
+        assertEquals(20, testAP1.helpScoresSpecial(sixthScoresSpecialB));
+        assertEquals(30, testAP1.helpScoresSpecial(seventhScoresSpecialA));
+        assertEquals(20, testAP1.helpScoresSpecial(seventhScoresSpecialB));
+        assertEquals(30, testAP1.helpScoresSpecial(eighthScoresSpecialA));
+        assertEquals(20, testAP1.helpScoresSpecial(eighthScoresSpecialB));
+        assertEquals(30, testAP1.helpScoresSpecial(ninthScoresSpecialA));
+        assertEquals(30, testAP1.helpScoresSpecial(ninthScoresSpecialB));
+        assertEquals(0, testAP1.helpScoresSpecial(tenthScoresSpecialA));
+        assertEquals(0, testAP1.helpScoresSpecial(tenthScoresSpecialB));
+        assertEquals(0, testAP1.helpScoresSpecial(eleventhScoresSpecialA));
+        assertEquals(20, testAP1.helpScoresSpecial(eleventhScoresSpecialB));
+        assertEquals(10, testAP1.helpScoresSpecial(twelfthScoresSpecialA));
+        assertEquals(30, testAP1.helpScoresSpecial(twelfthScoresSpecialB));
+    }
+
+    @Test
+    public void testScoresSpecial() {
+        int[] firstScoresSpecialA = {12, 10, 30};
+        int[] secondScoresSpecialA = {20, 10, 4};
+        int[] thirdScoresSpecialA = {12, 11, 4};
+        int[] fourthScoresSpecialA = {1, 20, 2, 50};
+        int[] fifthScoresSpecialA = {3, 4, 5};
+        int[] sixthScoresSpecialA = {10, 4, 20, 30};
+        int[] seventhScoresSpecialA = {10, 4, 20, 30};
+        int[] eighthScoresSpecialA = {10, 4, 20, 30};
+        int[] ninthScoresSpecialA = {10, 4, 20, 30};
+        int[] tenthScoresSpecialA = {};
+        int[] eleventhScoresSpecialA = {};
+        int[] twelfthScoresSpecialA = {14, 10,4};
+
+        int[] firstScoresSpecialB = {2, 20, 30};
+        int[] secondScoresSpecialB = {2, 20, 10};
+        int[] thirdScoresSpecialB = {2, 20, 31};
+        int[] fourthScoresSpecialB = {3, 4, 5};
+        int[] fifthScoresSpecialB = {1, 50, 2, 20};
+        int[] sixthScoresSpecialB = {20};
+        int[] seventhScoresSpecialB = {20};
+        int[] eighthScoresSpecialB = {3, 20, 99};
+        int[] ninthScoresSpecialB = {30, 20, 99};
+        int[] tenthScoresSpecialB = {2};
+        int[] eleventhScoresSpecialB = {20};
+        int[] twelfthScoresSpecialB = {4, 20, 30};
+
+        assertEquals(60, testAP1.scoresSpecial(firstScoresSpecialA, firstScoresSpecialB));
+        assertEquals(40, testAP1.scoresSpecial(secondScoresSpecialA, secondScoresSpecialB));
+        assertEquals(20, testAP1.scoresSpecial(thirdScoresSpecialA, thirdScoresSpecialB));
+        assertEquals(50, testAP1.scoresSpecial(fourthScoresSpecialA, fourthScoresSpecialB));
+        assertEquals(50, testAP1.scoresSpecial(fifthScoresSpecialA, fifthScoresSpecialB));
+        assertEquals(50, testAP1.scoresSpecial(sixthScoresSpecialA, sixthScoresSpecialB));
+        assertEquals(50, testAP1.scoresSpecial(seventhScoresSpecialA, seventhScoresSpecialB));
+        assertEquals(50, testAP1.scoresSpecial(eighthScoresSpecialA, eighthScoresSpecialB));
+        assertEquals(60, testAP1.scoresSpecial(ninthScoresSpecialA, ninthScoresSpecialB));
+        assertEquals(0, testAP1.scoresSpecial(tenthScoresSpecialA, tenthScoresSpecialB));
+        assertEquals(20, testAP1.scoresSpecial(eleventhScoresSpecialA, eleventhScoresSpecialB));
+        assertEquals(40, testAP1.scoresSpecial(twelfthScoresSpecialA, twelfthScoresSpecialB));
+    }
+
+    //bigHeights
+    @Test
+    public void testBigHeights() {
+        int[] firstBigHeights = {5, 3, 6, 7, 2};
+        int[] secondBigHeights = {5, 3, 6, 7, 2};
+        int[] thirdBigHeights = {5, 3, 6, 7, 2};
+        int[] fourthBigHeights = {5, 3, 6, 7, 3};
+        int[] fifthBigHeights = {5, 3, 6, 7, 2};
+        int[] sixthBigHeights = {5, 13, 6, 7, 2};
+        int[] seventhBigHeights = {5, 13, 6, 7, 2};
+        int[] eighthBigHeights = {5, 13, 6, 7, 2};
+        int[] ninthBigHeights = {5, 13, 6, 7, 2};
+        int[] tenthBigHeights = {5, 13, 6, 7, 2};
+        int[] eleventhBigHeights = {1, 2, 3, 4, 5, 4, 3, 2, 10};
+        int[] twelfthBigHeights = {1, 2, 3, 4, 5, 4, 3, 2, 10};
+        int[] thirteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+        int[] fourteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+        int[] fifteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+        int[] sixteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+
+        assertEquals(1, testAP1.bigHeights(firstBigHeights, 2, 4));
+        assertEquals(0, testAP1.bigHeights(secondBigHeights, 0, 1));
+        assertEquals(1, testAP1.bigHeights(thirdBigHeights, 0, 4));
+        assertEquals(0, testAP1.bigHeights(fourthBigHeights, 0, 4));
+        assertEquals(0, testAP1.bigHeights(fifthBigHeights, 1, 1));
+        assertEquals(1, testAP1.bigHeights(sixthBigHeights, 1, 2));
+        assertEquals(2, testAP1.bigHeights(seventhBigHeights, 0, 2));
+        assertEquals(2, testAP1.bigHeights(eighthBigHeights, 1, 4));
+        assertEquals(3, testAP1.bigHeights(ninthBigHeights, 0, 4));
+        assertEquals(2, testAP1.bigHeights(tenthBigHeights, 0, 3));
+        assertEquals(0, testAP1.bigHeights(eleventhBigHeights, 0, 3));
+        assertEquals(1, testAP1.bigHeights(twelfthBigHeights, 4, 8));
+        assertEquals(1, testAP1.bigHeights(thirteenthBigHeights, 0, 3));
+        assertEquals(1, testAP1.bigHeights(fourteenthBigHeights, 7, 8));
+        assertEquals(2, testAP1.bigHeights(fifteenthBigHeights, 3, 8));
+        assertEquals(3, testAP1.bigHeights(sixteenthBigHeights, 2, 8));
+    }
+
+    //commonTwo
+    @Test
+    public void testCommonTwo() {
+        String[] firstCommonTwoA = {"a", "c", "x"};
+        String[] secondCommonTwoA = {"a", "c", "x"};
+        String[] thirdCommonTwoA = {"a", "b", "c"};
+        String[] fourthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] fifthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] sixthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] seventhCommonTwoA = {"b", "b", "b", "b", "c"};
+        String[] eighthCommonTwoA = {"a", "b", "c", "c", "d"};
+        String[] ninthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] tenthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] eleventhCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] twelfthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] thirteenthCommonTwoA = {"a"};
+        String[] fourteenthCommonTwoA = {"a"};
+        String[] fifteenthCommonTwoA = {"a", "a"};
+        String[] sixteenthCommonTwoA = {"a", "b"};
+
+        String[] firstCommonTwoB = {"b", "c", "d", "x"};
+        String[] secondCommonTwoB = {"a", "b", "c", "x", "z"};
+        String[] thirdCommonTwoB = {"a", "b", "c"};
+        String[] fourthCommonTwoB = {"a", "b", "c"};
+        String[] fifthCommonTwoB = {"a", "b", "b", "b", "c"};
+        String[] sixthCommonTwoB = {"a", "b", "b", "c", "c"};
+        String[] seventhCommonTwoB = {"a", "b", "b", "b", "c"};
+        String[] eighthCommonTwoB = {"a", "b", "b", "c", "d", "d"};
+        String[] ninthCommonTwoB = {"b", "b", "b"};
+        String[] tenthCommonTwoB = {"c", "c"};
+        String[] eleventhCommonTwoB = {"b", "b", "b", "x"};
+        String[] twelfthCommonTwoB = {"b", "b"};
+        String[] thirteenthCommonTwoB = {"a", "b"};
+        String[] fourteenthCommonTwoB = {"b"};
+        String[] fifteenthCommonTwoB = {"b", "b"};
+        String[] sixteenthCommonTwoB = {"a", "b"};
+
+        assertEquals(2, testAP1.commonTwo(firstCommonTwoA, firstCommonTwoB));
+        assertEquals(3, testAP1.commonTwo(secondCommonTwoA, secondCommonTwoB));
+        assertEquals(3, testAP1.commonTwo(thirdCommonTwoA, thirdCommonTwoB));
+        assertEquals(3, testAP1.commonTwo(fourthCommonTwoA, fourthCommonTwoB));
+        assertEquals(3, testAP1.commonTwo(fifthCommonTwoA, fifthCommonTwoB));
+        assertEquals(3, testAP1.commonTwo(sixthCommonTwoA, sixthCommonTwoB));
+        assertEquals(2, testAP1.commonTwo(seventhCommonTwoA, seventhCommonTwoB));
+        assertEquals(4, testAP1.commonTwo(eighthCommonTwoA, eighthCommonTwoB));
+        assertEquals(1, testAP1.commonTwo(ninthCommonTwoA, ninthCommonTwoB));
+        assertEquals(1, testAP1.commonTwo(tenthCommonTwoA, tenthCommonTwoB));
+        assertEquals(1, testAP1.commonTwo(eleventhCommonTwoA, eleventhCommonTwoB));
+        assertEquals(1, testAP1.commonTwo(twelfthCommonTwoA, twelfthCommonTwoB));
+        assertEquals(1, testAP1.commonTwo(thirteenthCommonTwoA, thirteenthCommonTwoB));
+        assertEquals(0, testAP1.commonTwo(fourteenthCommonTwoA, fourteenthCommonTwoB));
+        assertEquals(0, testAP1.commonTwo(fifteenthCommonTwoA, fifteenthCommonTwoB));
+        assertEquals(2, testAP1.commonTwo(sixteenthCommonTwoA, sixteenthCommonTwoB));
     }
 
 

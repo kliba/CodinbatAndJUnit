@@ -1,7 +1,5 @@
 package ap1;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class App {
     public static void main(String[] args) {
@@ -135,6 +133,8 @@ public class App {
         myAP1.userCompare("bob", 1, "bob", 2);
         myAP1.userCompare("bzb", 1, "bob", 2);
 
+        //******https://codingbat.com/java/AP-1******second column
+
         //scores100
         int[] firstScores100 = {1, 100, 100};
         int[] secondScores100 = {1, 100, 99, 100};
@@ -261,6 +261,8 @@ public class App {
         myAP1.mergeTwo(eighthMergeTwoA, eighthMergeTwoB, 3);
         myAP1.mergeTwo(ninthMergeTwoA, ninthMergeTwoB, 3);
 
+        //******https://codingbat.com/java/AP-1******third column
+
         //scoresClump
         int[] firstScoresClump = {3, 4, 5};
         int[] secondScoresClump = {3, 4, 6};
@@ -347,6 +349,132 @@ public class App {
         myAP1.matchUp(twelfthMatchUpA, twelfthMatchUpB);
         myAP1.matchUp(thirteenthMatchUpA, thirteenMatchUpB);
 
+        //scoresSpecial
+        int[] firstScoresSpecialA = {12, 10, 30};
+        int[] secondScoresSpecialA = {20, 10, 4};
+        int[] thirdScoresSpecialA = {12, 11, 4};
+        int[] fourthScoresSpecialA = {1, 20, 2, 50};
+        int[] fifthScoresSpecialA = {3, 4, 5};
+        int[] sixthScoresSpecialA = {10, 4, 20, 30};
+        int[] seventhScoresSpecialA = {10, 4, 20, 30};
+        int[] eighthScoresSpecialA = {10, 4, 20, 30};
+        int[] ninthScoresSpecialA = {10, 4, 20, 30};
+        int[] tenthScoresSpecialA = {};
+        int[] eleventhScoresSpecialA = {};
+        int[] twelfthScoresSpecialA = {14, 10,4};
+
+        int[] firstScoresSpecialB = {2, 20, 30};
+        int[] secondScoresSpecialB = {2, 20, 10};
+        int[] thirdScoresSpecialB = {2, 20, 31};
+        int[] fourthScoresSpecialB = {3, 4, 5};
+        int[] fifthScoresSpecialB = {1, 50, 2, 20};
+        int[] sixthScoresSpecialB = {20};
+        int[] seventhScoresSpecialB = {20};
+        int[] eighthScoresSpecialB = {3, 20, 99};
+        int[] ninthScoresSpecialB = {30, 20, 99};
+        int[] tenthScoresSpecialB = {2};
+        int[] eleventhScoresSpecialB = {20};
+        int[] twelfthScoresSpecialB = {4, 20, 30};
+
+        myAP1.scoresSpecial(firstScoresSpecialA, firstScoresSpecialB);
+        myAP1.scoresSpecial(secondScoresSpecialA, secondScoresSpecialB);
+        myAP1.scoresSpecial(thirdScoresSpecialA, thirdScoresSpecialB);
+        myAP1.scoresSpecial(fourthScoresSpecialA, fourthScoresSpecialB);
+        myAP1.scoresSpecial(fifthScoresSpecialA, fifthScoresSpecialB);
+        myAP1.scoresSpecial(sixthScoresSpecialA, sixthScoresSpecialB);
+        myAP1.scoresSpecial(seventhScoresSpecialA, seventhScoresSpecialB);
+        myAP1.scoresSpecial(eighthScoresSpecialA, eighthScoresSpecialB);
+        myAP1.scoresSpecial(ninthScoresSpecialA, ninthScoresSpecialB);
+        myAP1.scoresSpecial(tenthScoresSpecialA, tenthScoresSpecialB);
+        myAP1.scoresSpecial(eleventhScoresSpecialA, eleventhScoresSpecialB);
+        myAP1.scoresSpecial(twelfthScoresSpecialA, twelfthScoresSpecialB);
+
+        //bigHeights
+        int[] firstBigHeights = {5, 3, 6, 7, 2};
+        int[] secondBigHeights = {5, 3, 6, 7, 2};
+        int[] thirdBigHeights = {5, 3, 6, 7, 2};
+        int[] fourthBigHeights = {5, 3, 6, 7, 3};
+        int[] fifthBigHeights = {5, 3, 6, 7, 2};
+        int[] sixthBigHeights = {5, 13, 6, 7, 2};
+        int[] seventhBigHeights = {5, 13, 6, 7, 2};
+        int[] eighthBigHeights = {5, 13, 6, 7, 2};
+        int[] ninthBigHeights = {5, 13, 6, 7, 2};
+        int[] tenthBigHeights = {5, 13, 6, 7, 2};
+        int[] eleventhBigHeights = {1, 2, 3, 4, 5, 4, 3, 2, 10};
+        int[] twelfthBigHeights = {1, 2, 3, 4, 5, 4, 3, 2, 10};
+        int[] thirteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+        int[] fourteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+        int[] fifteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+        int[] sixteenthBigHeights = {1, 2, 3, 14, 5, 4, 3, 2, 10};
+
+        myAP1.bigHeights(firstBigHeights, 2, 4);
+        myAP1.bigHeights(secondBigHeights, 0, 1);
+        myAP1.bigHeights(thirdBigHeights, 0, 4);
+        myAP1.bigHeights(fourthBigHeights, 0, 4);
+        myAP1.bigHeights(fifthBigHeights, 1, 1);
+        myAP1.bigHeights(sixthBigHeights, 1, 2);
+        myAP1.bigHeights(seventhBigHeights, 0, 2);
+        myAP1.bigHeights(eighthBigHeights, 1, 4);
+        myAP1.bigHeights(ninthBigHeights, 0, 4);
+        myAP1.bigHeights(tenthBigHeights, 0, 3);
+        myAP1.bigHeights(eleventhBigHeights, 0, 3);
+        myAP1.bigHeights(twelfthBigHeights, 4, 8);
+        myAP1.bigHeights(thirteenthBigHeights, 0, 3);
+        myAP1.bigHeights(fourteenthBigHeights, 7, 8);
+        myAP1.bigHeights(fifteenthBigHeights, 3, 8);
+        myAP1.bigHeights(sixteenthBigHeights, 2, 8);
+
+        //commonTwo
+        String[] firstCommonTwoA = {"a", "c", "x"};
+        String[] secondCommonTwoA = {"a", "c", "x"};
+        String[] thirdCommonTwoA = {"a", "b", "c"};
+        String[] fourthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] fifthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] sixthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] seventhCommonTwoA = {"b", "b", "b", "b", "c"};
+        String[] eighthCommonTwoA = {"a", "b", "c", "c", "d"};
+        String[] ninthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] tenthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] eleventhCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] twelfthCommonTwoA = {"a", "a", "b", "b", "c"};
+        String[] thirteenthCommonTwoA = {"a"};
+        String[] fourteenthCommonTwoA = {"a"};
+        String[] fifteenthCommonTwoA = {"a", "a"};
+        String[] sixteenthCommonTwoA = {"a", "b"};
+
+        String[] firstCommonTwoB = {"b", "c", "d", "x"};
+        String[] secondCommonTwoB = {"a", "b", "c", "x", "z"};
+        String[] thirdCommonTwoB = {"a", "b", "c"};
+        String[] fourthCommonTwoB = {"a", "b", "c"};
+        String[] fifthCommonTwoB = {"a", "b", "b", "b", "c"};
+        String[] sixthCommonTwoB = {"a", "b", "b", "c", "c"};
+        String[] seventhCommonTwoB = {"a", "b", "b", "b", "c"};
+        String[] eighthCommonTwoB = {"a", "b", "b", "c", "d", "d"};
+        String[] ninthCommonTwoB = {"b", "b", "b"};
+        String[] tenthCommonTwoB = {"c", "c"};
+        String[] eleventhCommonTwoB = {"b", "b", "b", "x"};
+        String[] twelfthCommonTwoB = {"b", "b"};
+        String[] thirteenthCommonTwoB = {"a", "b"};
+        String[] fourteenthCommonTwoB = {"b"};
+        String[] fifteenthCommonTwoB = {"b", "b"};
+        String[] sixteenthCommonTwoB = {"a", "b"};
+
+        myAP1.commonTwo(firstCommonTwoA, firstCommonTwoB);
+        myAP1.commonTwo(secondCommonTwoA, secondCommonTwoB);
+        myAP1.commonTwo(thirdCommonTwoA, thirdCommonTwoB);
+        myAP1.commonTwo(fourthCommonTwoA, fourthCommonTwoB);
+        myAP1.commonTwo(fifthCommonTwoA, fifthCommonTwoB);
+        myAP1.commonTwo(sixthCommonTwoA, sixthCommonTwoB);
+        myAP1.commonTwo(seventhCommonTwoA, seventhCommonTwoB);
+        myAP1.commonTwo(eighthCommonTwoA, eighthCommonTwoB);
+        myAP1.commonTwo(ninthCommonTwoA, ninthCommonTwoB);
+        myAP1.commonTwo(tenthCommonTwoA, tenthCommonTwoB);
+        myAP1.commonTwo(eleventhCommonTwoA, eleventhCommonTwoB);
+        myAP1.commonTwo(twelfthCommonTwoA, twelfthCommonTwoB);
+        myAP1.commonTwo(thirteenthCommonTwoA, thirteenthCommonTwoB);
+        myAP1.commonTwo(fourteenthCommonTwoA, fourteenthCommonTwoB);
+        myAP1.commonTwo(fifteenthCommonTwoA, fifteenthCommonTwoB);
+        myAP1.commonTwo(sixteenthCommonTwoA, sixteenthCommonTwoB);
 
 
 
