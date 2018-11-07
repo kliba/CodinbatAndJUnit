@@ -1,5 +1,7 @@
-package ap1test;
+package ap1;
 
+
+import ap1.AP1;
 
 public class App {
     public static void main(String[] args) {
