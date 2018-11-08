@@ -1,4 +1,4 @@
-CoodingBatWithJunit***
+CodinbatAndJUnit***
 
 It is motivated by the https://codingbat.com website. In this source you can find the Java solutions. These are my solutions so different thinking can make different solutions for these Java problems. Anyway, it is useful to read through to develop the code understanding skill. Every package has 2 classes.
 
