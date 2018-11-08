@@ -1,6 +1,7 @@
 package string1test;
 
 import org.junit.Test;
+import string1.String1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
